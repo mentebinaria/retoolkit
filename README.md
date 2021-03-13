@@ -2,7 +2,7 @@
 
 ## What?
 
-This is a collection of tools you may like if you are interested on reverse engineering and/or malware analysis. After installing this toolkit you'll have a folder in your desktop with shortcuts to RE tools like these:
+This is a collection of tools you may like if you are interested on reverse engineering and/or malware analysis on x86 and x64 Windows systems. After installing this toolkit you'll have a folder in your desktop with shortcuts to RE tools like these:
 
 ![](assets/ret2021c.png)
 
