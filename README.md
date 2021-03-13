@@ -4,7 +4,7 @@
 
 This is a collection of tools you may like if you are interested on reverse engineering and/or malware analysis. After installing this toolkit you'll have a folder in your desktop with shortcuts to RE tools like these:
 
-![](assets\ret2021c.png)
+![](assets/ret2021c.png)
 
 ## Why do I need it?
 
@@ -16,7 +16,7 @@ The *.iss files you see here are the source code for our setup program built wit
 
 ## Included tools
 
-![](assets\ret.gif)
+![](assets/ret.gif)
 
 ## Is it safe to install it in my environment?
 
