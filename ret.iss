@@ -5,7 +5,7 @@
 #define MyAppVersion "2021c"
 #define MyAppPublisher "Mente Binária"
 #define MySetupFileName "ret2021c_setup"
-#define MyAppURL "https://docs.retoolk.it/"
+#define MyAppURL "https://github.com/mentebinaria/retoolkit"
 #define MySrcDir "c:\tools\ret\"
 
 [Setup]
@@ -24,7 +24,7 @@ DefaultGroupName={#MyAppName}
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 PrivilegesRequired=lowest
 OutputBaseFilename={#MySetupFileName}
-Compression=none
+;Compression=none
 WizardStyle=modern
 
 [Components]
