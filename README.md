@@ -16,6 +16,8 @@ The *.iss files you see here are the source code for our setup program built wit
 
 ## Included tools
 
+Check the [wiki](https://github.com/mentebinaria/retoolkit/wiki).
+
 ![](assets/ret.gif)
 
 ## Is it safe to install it in my environment?
