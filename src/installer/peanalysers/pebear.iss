@@ -1,11 +1,11 @@
-; v0.5.3.2 (x86)
+; v0.5.4
 
 [Components]
 Name: "peanalysers\pebear"; Description: "PE-Bear"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\PE-bear\*"; DestDir: "{app}\PE-bear"; Components: "peanalysers\pebear"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\peanalysers\PE-bear\*"; DestDir: "{app}\PE-bear"; Components: "peanalysers\pebear"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{group}\{#MyAppName}\PE-bear"; Filename: "{app}\PE-bear\PE-bear.exe"; WorkingDir: "{app}\PE-bear"; Components: "peanalysers\pebear"
-Name: "{userdesktop}\{#MyAppName}\PE-bear"; Filename: "{app}\PE-bear\PE-bear.exe"; WorkingDir: "{app}\PE-bear"; Components: "peanalysers\pebear"
+Name: "{app}\sendto+\sendto\PE analysers\PE-bear"; Filename: "{app}\PE-bear\PE-bear.exe"; WorkingDir: "{app}\PE-bear"; Components: "peanalysers\pebear"

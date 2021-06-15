@@ -4,10 +4,10 @@
 Name: "dotnet\dnspy"; Description: "dnSpy"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\dnSpy\*"; DestDir: "{app}\dnSpy"; Components: "dotnet\dnspy"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\dotnet\dnSpy\*"; DestDir: "{app}\dotnet\dnSpy"; Components: "dotnet\dnspy"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{group}\{#MyAppName}\dnSpy (x86))"; Filename: "{app}\dnSpy\dnSpy-x86.exe"; WorkingDir: "{app}\dnSpy"; Components: "dotnet\dnspy"
-Name: "{userdesktop}\{#MyAppName}\dnSpy (x86)"; Filename: "{app}\dnSpy\dnSpy-x86.exe"; WorkingDir: "{app}\dnSpy"; Components: "dotnet\dnspy"
-Name: "{group}\{#MyAppName}\dnSpy (x64)"; Filename: "{app}\dnSpy\dnSpy.exe"; WorkingDir: "{app}\dnSpy"; Components: "dotnet\dnspy"
-Name: "{userdesktop}\{#MyAppName}\dnSpy (x64)"; Filename: "{app}\dnSpy\dnSpy.exe"; WorkingDir: "{app}\dnSpy"; Components: "dotnet\dnspy"
+Name: "{group}\{#MyAppName}\dnSpy (x86))"; Filename: "{app}\dotnet\dnSpy\dnSpy-x86.exe"; Components: "dotnet\dnspy"
+Name: "{app}\sendto+\sendto\Dotnet\dnSpy (x86)"; Filename: "{app}\dotnet\dnSpy\dnSpy-x86.exe"; Components: "dotnet\dnspy"
+Name: "{group}\{#MyAppName}\dnSpy (x64)"; Filename: "{app}\dotnet\dnSpy\dnSpy.exe"; Components: "dotnet\dnspy"
+Name: "{app}\sendto+\sendto\Dotnet\dnSpy (x64)"; Filename: "{app}\dotnet\dnSpy\dnSpy.exe"; Components: "dotnet\dnspy"

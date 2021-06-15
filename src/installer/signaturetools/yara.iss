@@ -4,4 +4,4 @@
 Name: "signaturetools\yara"; Description: "YARA"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\bin\yara*"; DestDir: "{app}\bin"; Components: "signaturetools\yara"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\signaturetools\yara\yara*"; DestDir: "{app}\bin"; Components: "signaturetools\yara"; Flags: ignoreversion recursesubdirs createallsubdirs

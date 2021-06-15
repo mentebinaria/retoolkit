@@ -1,7 +1,7 @@
-; v2.1
+; v2.2
 
 [Components]
 Name: "utilities\manw"; Description: "manw"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\bin\manw.exe"; DestDir: "{app}\bin"; Components: "utilities\manw"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\utilities\manw\manw.exe"; DestDir: "{app}\bin"; Components: "utilities\manw"; Flags: ignoreversion recursesubdirs createallsubdirs

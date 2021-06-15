@@ -4,4 +4,4 @@
 Name: "unpacking\novmp"; Description: "NoVmp"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\bin\NoVmp.exe"; DestDir: "{app}\bin"; Components: "unpacking\novmp"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\unpacking\novmp\NoVmp.exe"; DestDir: "{app}\bin"; Components: "unpacking\novmp"; Flags: ignoreversion recursesubdirs createallsubdirs
