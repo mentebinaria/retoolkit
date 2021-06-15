@@ -20,6 +20,7 @@ OutputBaseFilename={#MySetupFileName}
 WizardStyle=modern
 Compression=none
 SetupIconFile={#MySrcDir}\retoolkit.ico
+ArchitecturesInstallIn64BitMode=x64
 
 [Components]
 Name: "autoit"; Description: "AutoIt decompilers"; Types: full;
@@ -117,13 +118,16 @@ Name: "utilities"; Description: "Utilities"; Types: full;
 ; SendTo+ shortcuts
 ; Copy the application
 [Files]
-Source: "{#MySrcDir}\sendto+_x64.exe"; Destdir: "{app}\sendto+\"
+Source: "{#MySrcDir}\sendto+_x64.exe"; Destdir: "{app}\sendto+\"; Check: Is64BitInstallMode
+Source: "{#MySrcDir}\sendto+_x86.exe"; Destdir: "{app}\sendto+\"; Check: not Is64BitInstallMode
 Source: "{#MySrcDir}\retoolkit.ico"; Destdir: "{app}\sendto+\"
 
 ; Create a shortcut in "SendTo" user folder
 [Icons]
-Name: "{userappdata}\Microsoft\Windows\SendTo\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x64.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"
-Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x64.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"
+Name: "{userappdata}\Microsoft\Windows\SendTo\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x64.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"; Check: Is64BitInstallMode
+Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x64.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"; Check: Is64BitInstallMode
+Name: "{userappdata}\Microsoft\Windows\SendTo\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x86.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"; Check: not Is64BitInstallMode
+Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x86.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"; Check: not Is64BitInstallMode
 
 [Tasks]
 Name: "addtopath"; Description: "Add programs to PATH (requires logging in again)";
@@ -175,11 +179,11 @@ procedure CurStepChanged(CurStep: TSetupStep);
 begin
     if CurStep = ssPostInstall then
     begin
-      EnvAddPath(ExpandConstant('{app}') +'\bin');
-	  // not working
-      if CompareText(WizardSelectedComponents(False), 'dotnet,dotnet\de4dot') = 0 then EnvAddPath(ExpandConstant('{app}') +'\de4dot');
-      if CompareText(WizardSelectedComponents(False), 'utilities,utilities\winapiexec') = 0 then EnvAddPath(ExpandConstant('{app}') +'\winapiexec');
-      if CompareText(WizardSelectedComponents(False), 'documentanalysis,documentanalysis\officemalscanner') = 0 then EnvAddPath(ExpandConstant('{app}') +'\officemalscanner');
+      EnvAddPath(ExpandConstant('{app}') + '\bin');
+      
+      if WizardIsComponentSelected('dotnet\de4dot') then EnvAddPath(ExpandConstant('{app}') + '\dotnet\de4dot');
+      if WizardIsComponentSelected('utilities\winapiexec') then EnvAddPath(ExpandConstant('{app}') + '\utilities\winapiexec');
+      if WizardIsComponentSelected('office\officemalscanner') then EnvAddPath(ExpandConstant('{app}') + '\office\officemalscanner');
     end
 end;
 
@@ -188,8 +192,8 @@ begin
     if CurUninstallStep = usPostUninstall then
     begin
       EnvRemovePath(ExpandConstant('{app}') +'\bin');
-      EnvRemovePath(ExpandConstant('{app}') +'\de4dot');
-      EnvRemovePath(ExpandConstant('{app}') +'\winapiexec');
-      EnvRemovePath(ExpandConstant('{app}') +'\officemalscanner');
+      EnvRemovePath(ExpandConstant('{app}') +'\dotnet\de4dot');
+      EnvRemovePath(ExpandConstant('{app}') +'\utilities\winapiexec');
+      EnvRemovePath(ExpandConstant('{app}') +'\office\officemalscanner');
     end
 end;
