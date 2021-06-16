@@ -18,7 +18,7 @@ DefaultGroupName={#MyAppName}
 ;PrivilegesRequired=lowest
 OutputBaseFilename={#MySetupFileName}
 WizardStyle=modern
-Compression=none
+;Compression=none
 SetupIconFile={#MySrcDir}\retoolkit.ico
 ArchitecturesInstallIn64BitMode=x64
 
@@ -33,6 +33,7 @@ Name: "compilers"; Description: "Compilers"; Types: full;
 
 [Components]
 Name: "debuggers"; Description: "Debuggers"; Types: full;
+#include "debuggers\cutter.iss"
 #include "debuggers\x64dbg.iss"
 
 [Components]
@@ -88,6 +89,7 @@ Name: "peanalysers"; Description: "PE analysers"; Types: full;
 Name: "processmonitors"; Description: "Process monitors"; Types: full;
 #include "processmonitors\apimonitor.iss"
 #include "processmonitors\filegrab.iss"
+#include "processmonitors\pesieve.iss"
 #include "processmonitors\processhacker.iss"
 #include "processmonitors\sysexp.iss"
 
