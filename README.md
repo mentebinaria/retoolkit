@@ -37,9 +37,12 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
 * Removed Start Menu shortcuts.
 * New context menu (right-click on a file -> Send to -> retoolkit).
 * fasm now opens .asm files if you double-click on them.
-* Added JADX.
+* Tools added: JADX, Cutter and PE-sieve.
 * Tools upaded to the latest version.
 * Updated Error Lookup tool to a different one, with more features.
+* A few tools have their path added to user's PATH environment variable.
+* New icon. Thanks to [@pauloarruzzo](https://twitter.com/pauloarruzzo).
 
 ### v2021c
+
 * First public release.
