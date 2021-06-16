@@ -2,9 +2,12 @@
 
 ## What?
 
-This is a collection of tools you may like if you are interested on reverse engineering and/or malware analysis on x86 and x64 Windows systems. After installing this toolkit you'll have a folder in your desktop with shortcuts to RE tools like these:
+This is a collection of tools you may like if you are interested on reverse engineering and/or malware analysis on x86 and x64 Windows systems. After installing this program, you'll have to ways to access the tools:
 
-![](assets/ret2021c.png)
+* Double-click the `retoolkit` icon in the Desktop.
+* Right-click on a file, choose `Send to -> retoolkit`. This way the selected file is passed as argument to the desired program.
+
+![](assets/retoolkit.gif)
 
 ## Why do I need it?
 
@@ -16,9 +19,7 @@ The *.iss files you see here are the source code for our setup program built wit
 
 ## Included tools
 
-Check the [wiki](https://github.com/mentebinaria/retoolkit/wiki).
-
-![](assets/ret.gif)
+Have a look at the [wiki](https://github.com/mentebinaria/retoolkit/wiki) for a detailed list.
 
 ## Is it safe to install it in my environment?
 
@@ -26,4 +27,19 @@ I don't know. Some included tools are not open source and come from shady places
 
 ## Can you add tool X?
 
-It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, and the license allows us to redistribuite the software, please [file a request here](https://github.com/mentebinaria/retoolkit/discussions/categories/new-app-requests).
+It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, and the license allows us to redistribuite the software, please [open an issue here](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) if it doesn't exit yet.
+
+## Changelog
+
+### v2021d
+
+* Better organization based on target file type.
+* Removed Start Menu shortcuts.
+* New context menu (right-click on a file -> Send to -> retoolkit).
+* fasm now opens .asm files if you double-click on them.
+* Added JADX.
+* Tools upaded to the latest version.
+* Updated Error Lookup tool to a different one, with more features.
+
+### v2021c
+* First public release.
