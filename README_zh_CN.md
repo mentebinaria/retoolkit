@@ -16,7 +16,7 @@
 
 ## 下载
 
-你在这里看到的*.iss 文件，是我们用 [Inno Setup](https://jrsoftware.org/isinfo.php)建立的安装程序的源代码。要下载真正的东西，你必须到 [Releases](https://github.com/mentebinaria/retoolkit/releases) 部分去下载安装程序。
+你在这里看到的*.iss 文件，是我们用 [Inno Setup](https://jrsoftware.org/isinfo.php)建立的安装程序的源代码。要下载真正的安装包，你必须到 [Releases](https://github.com/mentebinaria/retoolkit/releases) 部分去下载安装程序。
 
 ## 包含的工具
 
