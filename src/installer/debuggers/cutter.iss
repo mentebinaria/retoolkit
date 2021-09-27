@@ -1,4 +1,4 @@
-; v2.0.2
+; v2.0.3
 
 [Components]
 Name: "debuggers\cutter"; Description: "Cutter"; Types: full; Check: Is64BitInstallMode
