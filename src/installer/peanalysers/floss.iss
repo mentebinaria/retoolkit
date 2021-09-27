@@ -1,4 +1,5 @@
 ; v1.7.0
+; https://github.com/mandiant/flare-floss
 
 [Components]
 Name: "peanalysers\floss"; Description: "FLOSS"; Types: full; Check: Is64BitInstallMode
