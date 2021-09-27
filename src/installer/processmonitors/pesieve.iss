@@ -1,4 +1,5 @@
-; v0.2.9.6
+; v0.3.1.3
+; https://github.com/hasherezade/pe-sieve/
 
 [Components]
 Name: "processmonitors\pesieve"; Description: "PE-sieve"; Types: full;
