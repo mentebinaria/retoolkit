@@ -1,4 +1,5 @@
 ; v5.1.8 (build 360)
+; http://www.angusj.com/resourcehacker/
 
 [Components]
 Name: "peresourceeditors\reshack"; Description: "Resource Hacker"; Types: full;
