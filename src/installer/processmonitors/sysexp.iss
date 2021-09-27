@@ -1,4 +1,5 @@
 ; v0.91
+; https://github.com/zodiacon/SystemExplorer
 
 [Components]
 Name: "processmonitors\sysexp"; Description: "System Explorer"; Types: full; Check: Is64BitInstallMode

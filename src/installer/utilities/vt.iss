@@ -1,4 +1,5 @@
 ; v0.9.7
+; https://github.com/VirusTotal/vt-cli
 
 [Components]
 Name: "utilities\vt"; Description: "vt (VirusTotal CLI tool)"; Types: full;
