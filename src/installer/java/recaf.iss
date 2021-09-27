@@ -1,4 +1,5 @@
-; v2.20.0
+; v2.21.0
+; https://github.com/Col-E/Recaf
 
 [Components]
 Name: "java\recaf"; Description: "Recaf"; Types: full;
