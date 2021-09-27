@@ -1,4 +1,4 @@
-; v0.3.91
+; v0.3.92
 
 [Components]
 Name: "hexeditors\rehex"; Description: "Reverse Engineers' Hex Editor"; Types: full compact;
