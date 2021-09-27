@@ -1,4 +1,5 @@
-; v1.6.3
+; v3.0.1
+; https://github.com/mandiant/capa
 
 [Components]
 Name: "peanalysers\capa"; Description: "capa"; Types: full; Check: Is64BitInstallMode
