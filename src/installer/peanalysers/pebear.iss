@@ -1,4 +1,5 @@
 ; v0.5.4
+; https://github.com/hasherezade/pe-bear-releases
 
 [Components]
 Name: "peanalysers\pebear"; Description: "PE-Bear"; Types: full;
