@@ -1,4 +1,4 @@
-; v1.8.1
+; v1.10.0
 
 [Components]
 Name: "hexeditors\imhex"; Description: "ImHex"; Types: full; Check: Is64BitInstallMode
