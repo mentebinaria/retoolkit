@@ -18,7 +18,7 @@ DefaultGroupName={#MyAppName}
 OutputBaseFilename={#MyAppName}_{#MyAppVersion}_setup
 WizardStyle=modern
 ;Compression=none
-SetupIconFile={#MySrcDir}\retoolkit.ico
+SetupIconFile="..\..\assets\retoolkit.ico"
 ArchitecturesInstallIn64BitMode=x64
 
 [Components]
