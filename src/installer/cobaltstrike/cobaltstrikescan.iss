@@ -1,4 +1,5 @@
 ; v1.1.2
+; https://github.com/Apr4h/CobaltStrikeScan
 
 [Components]
 Name: "cobaltstrike\cobaltstrikescan"; Description: "CobaltStrikeScan"; Types: full;

@@ -1,4 +1,5 @@
 ; v2.0.3
+; https://cutter.re/
 
 [Components]
 Name: "debuggers\cutter"; Description: "Cutter"; Types: full; Check: Is64BitInstallMode

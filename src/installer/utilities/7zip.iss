@@ -2,7 +2,7 @@
 ; https://www.7-zip.org
 
 [Components]
-Name: "utilities\7zip"; Description: "7zip"; Types: full;
+Name: "utilities\7zip"; Description: "7-Zip"; Types: full;
 
 [Files]
 Source: "{#MySrcDir}\utilities\7zip\*.exe"; DestDir: "{app}\7zip"; Components: "utilities\7zip"; Flags: ignoreversion recursesubdirs createallsubdirs
