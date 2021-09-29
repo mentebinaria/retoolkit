@@ -38,6 +38,7 @@ Name: "cobaltstrike"; Description: "Cobalt Strike beacon analysis"; Types: full;
 [Components]
 Name: "debuggers"; Description: "Debuggers"; Types: full;
 #include "debuggers\cutter.iss"
+#include "debuggers\hyperdbg.iss"
 #include "debuggers\x64dbg.iss"
 
 [Components]
@@ -93,12 +94,14 @@ Name: "peanalysers"; Description: "PE analysers"; Types: full;
 #include "peanalysers\pebear.iss"
 #include "peanalysers\pestudio.iss"
 #include "peanalysers\pev.iss"
+#include "peanalysers\redress.iss"
 #include "peanalysers\reshack.iss"
 
 [Components]
 Name: "processmonitors"; Description: "Process monitors"; Types: full;
 #include "processmonitors\apimonitor.iss"
 #include "processmonitors\filegrab.iss"
+#include "processmonitors\hollowshunter.iss"
 #include "processmonitors\pesieve.iss"
 #include "processmonitors\processhacker.iss"
 #include "processmonitors\sysexp.iss"
@@ -206,6 +209,9 @@ begin
       if WizardIsComponentSelected('utilities\winapiexec') then EnvAddPath(ExpandConstant('{app}') + '\utilities\winapiexec');
       if WizardIsComponentSelected('ole\officemalscanner') then EnvAddPath(ExpandConstant('{app}') + '\ole\officemalscanner');
       if WizardIsComponentSelected('android\dex2jar') then EnvAddPath(ExpandConstant('{app}') + '\android\dex2jar');
+      if WizardIsComponentSelected('debuggers\hyperdbg') then EnvAddPath(ExpandConstant('{app}') + '\debuggers\hyperdbg');
+      if WizardIsComponentSelected('processmonitors\pesieve') then EnvAddPath(ExpandConstant('{app}') + '\processmonitors\pesieve');
+      if WizardIsComponentSelected('processmonitors\hollowshunter') then EnvAddPath(ExpandConstant('{app}') + '\processmonitors\hollowshunter');
       EnvAddPath(ExpandConstant('{app}') + '\bin');
     end
 end;
@@ -219,6 +225,9 @@ begin
       EnvRemovePath(ExpandConstant('{app}') + '\utilities\winapiexec');
       EnvRemovePath(ExpandConstant('{app}') + '\ole\officemalscanner');
       EnvRemovePath(ExpandConstant('{app}') + '\android\dex2jar');
+      EnvRemovePath(ExpandConstant('{app}') + '\debugger\hyperdbg');
+      EnvRemovePath(ExpandConstant('{app}') + '\processmonitors\pesieve');
+      EnvRemovePath(ExpandConstant('{app}') + 'processmonitors\hollowshunter');
       EnvRemovePath(ExpandConstant('{app}') + '\bin');
     end
 end;
