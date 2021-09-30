@@ -1,4 +1,5 @@
 ; v1.2.0
+; https://github.com/skylot/jadx
 
 [Components]
 Name: "java\jadx"; Description: "Dex to Java decompiler (JADX)"; Types: full; Check: Is64BitInstallMode

@@ -1,4 +1,5 @@
 ; v2.2
+; https://github.com/leandrofroes/manw
 
 [Components]
 Name: "utilities\manw"; Description: "manw"; Types: full;

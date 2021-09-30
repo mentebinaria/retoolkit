@@ -1,4 +1,5 @@
 ; v0.4
+; https://github.com/merces/filegrab
 
 [Components]
 Name: "processmonitors\filegrab"; Description: "FileGrab"; Types: full;

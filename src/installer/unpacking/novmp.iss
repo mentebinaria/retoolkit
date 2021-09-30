@@ -1,4 +1,5 @@
 ; v1.0.6
+; https://github.com/can1357/NoVmp
 
 [Components]
 Name: "unpacking\novmp"; Description: "NoVmp"; Types: full; Check: Is64BitInstallMode

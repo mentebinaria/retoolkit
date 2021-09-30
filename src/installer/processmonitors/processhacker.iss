@@ -1,4 +1,5 @@
 ; v2.39.124
+; https://github.com/processhacker/processhacker
 
 [Components]
 Name: "processmonitors\processhacker"; Description: "Process Hacker"; Types: full;

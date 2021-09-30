@@ -1,4 +1,5 @@
 ; v2.4.1
+; https://github.com/henrypp/errorlookup
 
 [Components]
 Name: "utilities\errorlookup"; Description: "Error Lookup"; Types: full;

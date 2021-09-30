@@ -28,22 +28,47 @@ I don't know. Some included tools are not open source and come from shady places
 
 ## Can you add tool X?
 
-It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, and the license allows us to redistribuite the software, please [open an issue here](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) if it doesn't exit yet.
+It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, and the license allows us to redistribuite the software, please [open an issue here](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) if it doesn't exist yet.
 
 ## Changelog
 
+### 2021.10
+
+* Yeah, new version numbering scheme borrowed from Ubuntu releases. :)
+* Reorganized MSI analysis tools under OLE tools section.
+* Updated current tools.
+* Fixed pev PATH.
+* Fixed license SendTo+ license issue (closes [#34](https://github.com/mentebinaria/retoolkit/issues/34)).
+* Lots of new functions added to SlothBP x64dbg plugin configuration.
+* New DIE signatures added.
+* Tools added:
+    * Dev-C++ compiler.
+    * Java 8 Runtime Environment, needed by Java tools.
+    * Python 3 (via WinPython), mainly to support Python-based tools.
+    * XLMMacroDeobfuscator.
+    * dnSpyEx (new, maintained dnSpy fork).  
+    * oledump.
+    * oletools (closes [#33](https://github.com/mentebinaria/retoolkit/issues/33)).
+    * pdfid.py.
+    * pdf-parser.py
+    * MapoAnalyzer x64dbg plugin.
+    * xSelectBlock x64dbg plugin.
+    * redress.
+    * hollows_hunter.
+    * HyperDbg.
+    * Threadtear.
+    * 1768.py.
+    * dex2jar.
+
 ### v2021d
 
+* Added JADX.
 * Better organization based on target file type.
-* Removed Start Menu shortcuts.
 * New context menu (right-click on a file -> Send to -> retoolkit).
-* fasm now opens .asm files if you double-click on them.
-* Tools added: JADX, Cutter and PE-sieve.
-* Tools upaded to the latest version.
+* Removed Start Menu shortcuts.
+* Tools updated to the latest version.
 * Updated Error Lookup tool to a different one, with more features.
-* A few tools have their path added to user's PATH environment variable.
-* New icon. Thanks to [@pauloarruzzo](https://twitter.com/pauloarruzzo).
+* fasm now opens .asm files if you double-click them.
 
 ### v2021c
-
 * First public release.

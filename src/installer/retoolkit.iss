@@ -1,7 +1,6 @@
 #define MyAppName "retoolkit"
-#define MyAppVersion "2021d"
+#define MyAppVersion "2021.10"
 #define MyAppPublisher "Mente Binária"
-#define MySetupFileName "ret2021d_setup"
 #define MyAppURL "https://github.com/mentebinaria/retoolkit"
 #define MySrcDir "c:\tools\ret\"
 
@@ -16,11 +15,15 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={userpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 ;PrivilegesRequired=lowest
-OutputBaseFilename={#MySetupFileName}
+OutputBaseFilename={#MyAppName}_{#MyAppVersion}_setup
 WizardStyle=modern
 ;Compression=none
-SetupIconFile={#MySrcDir}\retoolkit.ico
+SetupIconFile="..\..\assets\retoolkit.ico"
 ArchitecturesInstallIn64BitMode=x64
+
+[Components]
+Name: "android"; Description: "Android tools"; Types: full;
+#include "android\dex2jar.iss"
 
 [Components]
 Name: "autoit"; Description: "AutoIt decompilers"; Types: full;
@@ -28,12 +31,14 @@ Name: "autoit"; Description: "AutoIt decompilers"; Types: full;
 #include "autoit\myauttoexe.iss"
 
 [Components]
-Name: "compilers"; Description: "Compilers"; Types: full;
-#include "compilers\fasm.iss"
+Name: "cobaltstrike"; Description: "Cobalt Strike beacon analysis"; Types: full;
+#include "cobaltstrike\1768.iss"
+#include "cobaltstrike\cobaltstrikescan.iss"
 
 [Components]
 Name: "debuggers"; Description: "Debuggers"; Types: full;
 #include "debuggers\cutter.iss"
+#include "debuggers\hyperdbg.iss"
 #include "debuggers\x64dbg.iss"
 
 [Components]
@@ -48,6 +53,7 @@ Name: "delphi"; Description: "Delphi Tools"; Types: full;
 Name: "dotnet"; Description: "Dotnet Tools"; Types: full;
 #include "dotnet\de4dot.iss"
 #include "dotnet\dnspy.iss"
+#include "dotnet\dnspyex.iss"
 #include "dotnet\ilspy.iss"
 
 [Components]
@@ -61,18 +67,23 @@ Name: "java"; Description: "Java decompilers"; Types: full;
 #include "java\jadx.iss"
 #include "java\jdgui.iss"
 #include "java\recaf.iss"
+#include "java\threadtear.iss"
 
 [Components]
-Name: "msi"; Description: "MSI analysis"; Types: full;
-#include "msi\lessmsi.iss"
+Name: "ole"; Description: "OLE/Compound File Binary File analysis (.msi, .doc, etc)"; Types: full;
+#include "ole\lessmsi.iss"
+#include "ole\officemalscanner.iss"
+#include "ole\oledump.iss"
+#include "ole\ssview.iss"
 
 [Components]
 Name: "network"; Description: "Network tools"; Types: full;
 #include "network\bewareircd.iss"
 
 [Components]
-Name: "office"; Description: "Office document analysis"; Types: full;
-#include "office\officemalscanner.iss"
+Name: "pdf"; Description: "PDF tools"; Types: full;
+#include "pdf\pdf-parser.iss"
+#include "pdf\pdfid.iss"
 
 [Components]
 Name: "peanalysers"; Description: "PE analysers"; Types: full;
@@ -83,15 +94,23 @@ Name: "peanalysers"; Description: "PE analysers"; Types: full;
 #include "peanalysers\pebear.iss"
 #include "peanalysers\pestudio.iss"
 #include "peanalysers\pev.iss"
+#include "peanalysers\redress.iss"
 #include "peanalysers\reshack.iss"
 
 [Components]
 Name: "processmonitors"; Description: "Process monitors"; Types: full;
 #include "processmonitors\apimonitor.iss"
 #include "processmonitors\filegrab.iss"
+#include "processmonitors\hollowshunter.iss"
 #include "processmonitors\pesieve.iss"
 #include "processmonitors\processhacker.iss"
 #include "processmonitors\sysexp.iss"
+
+[Components]
+Name: "programming"; Description: "Programming"; Types: full;
+#include "programming\fasm.iss"
+#include "programming\devcpp.iss"
+#include "programming\winpython.iss"
 
 [Components]
 Name: "signaturetools"; Description: "Signature tools"; Types: full;
@@ -109,6 +128,7 @@ Name: "utilities"; Description: "Utilities"; Types: full;
 #include "utilities\7zip.iss"
 #include "utilities\cyberchef.iss"
 #include "utilities\errorlookup.iss"
+#include "utilities\jre.iss"
 #include "utilities\manw.iss"
 #include "utilities\vt.iss"
 #include "utilities\winapiexec.iss"
@@ -119,9 +139,12 @@ Name: "utilities"; Description: "Utilities"; Types: full;
 
 ; SendTo+ shortcuts
 ; Copy the application
+
 [Files]
-Source: "{#MySrcDir}\sendto+_x64.exe"; Destdir: "{app}\sendto+\"; Check: Is64BitInstallMode
-Source: "{#MySrcDir}\sendto+_x86.exe"; Destdir: "{app}\sendto+\"; Check: not Is64BitInstallMode
+Source: "{#MySrcDir}\sendto+\sendto+_x64.exe"; Destdir: "{app}\sendto+\"; Check: Is64BitInstallMode
+Source: "{#MySrcDir}\sendto+\sendto+_x86.exe"; Destdir: "{app}\sendto+\"; Check: not Is64BitInstallMode
+Source: "{#MySrcDir}\sendto+\LICENSE"; Destdir: "{app}\sendto+\"
+Source: "{#MySrcDir}\sendto+\readme.md"; Destdir: "{app}\sendto+\"
 Source: "{#MySrcDir}\retoolkit.ico"; Destdir: "{app}\sendto+\"
 
 ; Create a shortcut in "SendTo" user folder
@@ -181,11 +204,15 @@ procedure CurStepChanged(CurStep: TSetupStep);
 begin
     if CurStep = ssPostInstall then
     begin
-      EnvAddPath(ExpandConstant('{app}') + '\bin');
-      
+      if WizardIsComponentSelected('compilers\devcpp') then EnvAddPath(ExpandConstant('{app}') + '\compilers\devcpp\TDM-GCC-64\bin');
       if WizardIsComponentSelected('dotnet\de4dot') then EnvAddPath(ExpandConstant('{app}') + '\dotnet\de4dot');
       if WizardIsComponentSelected('utilities\winapiexec') then EnvAddPath(ExpandConstant('{app}') + '\utilities\winapiexec');
-      if WizardIsComponentSelected('office\officemalscanner') then EnvAddPath(ExpandConstant('{app}') + '\office\officemalscanner');
+      if WizardIsComponentSelected('ole\officemalscanner') then EnvAddPath(ExpandConstant('{app}') + '\ole\officemalscanner');
+      if WizardIsComponentSelected('android\dex2jar') then EnvAddPath(ExpandConstant('{app}') + '\android\dex2jar');
+      if WizardIsComponentSelected('debuggers\hyperdbg') then EnvAddPath(ExpandConstant('{app}') + '\debuggers\hyperdbg');
+      if WizardIsComponentSelected('processmonitors\pesieve') then EnvAddPath(ExpandConstant('{app}') + '\processmonitors\pesieve');
+      if WizardIsComponentSelected('processmonitors\hollowshunter') then EnvAddPath(ExpandConstant('{app}') + '\processmonitors\hollowshunter');
+      EnvAddPath(ExpandConstant('{app}') + '\bin');
     end
 end;
 
@@ -193,9 +220,14 @@ procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
 begin
     if CurUninstallStep = usPostUninstall then
     begin
-      EnvRemovePath(ExpandConstant('{app}') +'\bin');
-      EnvRemovePath(ExpandConstant('{app}') +'\dotnet\de4dot');
-      EnvRemovePath(ExpandConstant('{app}') +'\utilities\winapiexec');
-      EnvRemovePath(ExpandConstant('{app}') +'\office\officemalscanner');
+      EnvRemovePath(ExpandConstant('{app}') + '\compilers\devcpp\TDM-GCC-64\bin');
+      EnvRemovePath(ExpandConstant('{app}') + '\dotnet\de4dot');
+      EnvRemovePath(ExpandConstant('{app}') + '\utilities\winapiexec');
+      EnvRemovePath(ExpandConstant('{app}') + '\ole\officemalscanner');
+      EnvRemovePath(ExpandConstant('{app}') + '\android\dex2jar');
+      EnvRemovePath(ExpandConstant('{app}') + '\debugger\hyperdbg');
+      EnvRemovePath(ExpandConstant('{app}') + '\processmonitors\pesieve');
+      EnvRemovePath(ExpandConstant('{app}') + 'processmonitors\hollowshunter');
+      EnvRemovePath(ExpandConstant('{app}') + '\bin');
     end
 end;
