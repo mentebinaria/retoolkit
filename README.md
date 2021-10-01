@@ -59,6 +59,7 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
     * HyperDbg.
     * Threadtear.
     * 1768.py.
+    * CobaltStrikeScan.
     * dex2jar.
 
 ### v2021d
