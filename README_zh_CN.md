@@ -1,4 +1,5 @@
-选择阅读语言：[English](./README.md) | 中文简体
+[English](./README.md) | 中文简体
+
 # 逆向工程师的工具包
 
 ## 这是一个什么工具？
