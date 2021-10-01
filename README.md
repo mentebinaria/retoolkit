@@ -1,3 +1,4 @@
+Selection Reading Language: English| [中文简体](./README_zh_CN.md)
 # Reverse Engineer's Toolkit
 
 ## What?
