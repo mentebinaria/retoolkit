@@ -7,7 +7,7 @@ English | [中文简体](./README_zh_CN.md) | [Français](./README_fr_FR.md)
 Il s'agit d'une collection d'outils qui pourraient vous intéresser si vous vous consacrez à la rétro-ingénierie et/ou à l'analyse des logiciels malveillants sur les systèmes Windows x86 et x64. Après avoir installé ce programme, vous devrez obtenir plusieurs moyens d'accéder aux outils :
 
 * Double-clic sur l'icône `retoolkit` présent sur le Bureau.
-* Clic droti sur un fichier, choisissez `Envoyer vers -> retoolkit`. De cette manière, le fichier sélectionné est transmis comme argument au programme souhaité.
+* Clic droit sur un fichier, choisissez `Envoyer vers -> retoolkit`. De cette manière, le fichier sélectionné est transmis comme argument au programme souhaité.
 
 ![](assets/retoolkit.gif)
 
