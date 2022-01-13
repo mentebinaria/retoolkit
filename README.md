@@ -4,7 +4,7 @@ English | [中文简体](./README_zh_CN.md) | [Français](./README_fr_FR.md)
 
 ## What?
 
-This is a collection of tools you may like if you are interested on reverse engineering and/or malware analysis on x86 and x64 Windows systems. After installing this program, you'll have to ways to access the tools:
+This is a collection of tools you may like if you are interested on reverse engineering and/or malware analysis on x86 and x64 Windows systems. After installing this program, you'll have two ways to access the tools:
 
 * Double-click the `retoolkit` icon in the Desktop.
 * Right-click on a file, choose `Send to -> retoolkit`. This way the selected file is passed as argument to the desired program.
