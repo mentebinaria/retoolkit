@@ -29,7 +29,7 @@ Je ne sais pas. Certains outils inclus ne sont pas open source et proviennent d'
 
 ## Pouvez-vous ajouter l'outil X ?
 
-Cela dépend. L'idée est de rester simple. Nous n'ajouterons pas un outil simplement parce qu'il n'existe pas encore. Mais si vous pensez qu'il y a une bonne raison de le faire et que la licence nous permet de redistribuer le logiciel, veuillez [ouvrir une issue ici] (https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) s'il n'existe pas encore.
+Cela dépend. L'idée est de rester simple. Nous n'ajouterons pas un outil simplement parce qu'il n'existe pas encore. Mais si vous pensez qu'il y a une bonne raison de le faire et que la licence nous permet de redistribuer le logiciel, veuillez [ouvrir une issue ici](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) s'il n'existe pas encore.
 
 ## Historique des modifications
 
