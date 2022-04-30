@@ -1,7 +1,8 @@
-; v0.0.60
+; v0.0.65
+; https://blog.didierstevens.com/programs/oledump-py/
 
 [Components]
 Name: "ole\oledump"; Description: "oledump"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\ole\oledump\*"; DestDir: "{app}\programming\winpython\scripts\oldeump"; Components: "ole\oledump"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\ole\oledump\*"; DestDir: "{app}\programming\winpython\scripts\oledump"; Components: "ole\oledump"; Flags: ignoreversion recursesubdirs createallsubdirs

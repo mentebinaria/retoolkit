@@ -1,4 +1,4 @@
-; v10.0.3
+; v10.1.3
 
 [Components]
 Name: "decompilers\ghidra"; Description: "Ghidra"; Types: full; Check: Is64BitInstallMode

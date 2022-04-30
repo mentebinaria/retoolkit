@@ -1,4 +1,5 @@
 ; v0.81
+; https://github.com/merces/pev
 
 [Components]
 Name: "peanalysers\pev"; Description: "pev"; Types: full;

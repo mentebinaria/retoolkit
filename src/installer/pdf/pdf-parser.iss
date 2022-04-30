@@ -1,5 +1,5 @@
 ; v0.7.5
-; https://github.com/DidierStevens/DidierStevensSuite/blob/master/pdf-parser.py
+; https://blog.didierstevens.com/programs/pdf-tools/
 
 [Components]
 Name: "pdf\pdfparser"; Description: "pdf-parser"; Types: full;

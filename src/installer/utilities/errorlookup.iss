@@ -1,4 +1,4 @@
-; v2.4.1
+; v2.4.2
 ; https://github.com/henrypp/errorlookup
 
 [Components]

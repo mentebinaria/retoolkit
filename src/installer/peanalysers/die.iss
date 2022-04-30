@@ -1,5 +1,5 @@
-; v3.0.2
-; https://github.com/horsicq/Detect-It-Easy
+; v3.0.4
+; https://github.com/horsicq/DIE-engine
 
 [Components]
 Name: "peanalysers\die"; Description: "Detect It Easy"; Types: full compact;

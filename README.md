@@ -33,6 +33,23 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
 
 ## Changelog
 
+### 2022.04
+
+* Added:
+    * Echo Mirage.
+    * elfparser-ng.
+    * entropy (closes [#47](https://github.com/mentebinaria/retoolkit/issues/47)).
+    * Force Toolkit.
+    * MiniDump x64dbg plugin.
+    * Notepad++.
+    * OllyDumpEx x64dbg plugin (closes [#41](https://github.com/mentebinaria/retoolkit/issues/41)).
+* Removed:
+    * Bewareircd: Too specific to analyze (now rare?) IRC-based communications.
+    * dnSpy: Replaced by dnSpyEx.
+    * HyperDBG: It's a nice project, but they don't provide binary releases yet, meaning a lot of work for me.
+    * JRE: Replaced by JDK, which is required by Ghidra.
+    * Threadtear: It doesn't work with JDK required by Ghidra.
+
 ### 2021.10
 
 * Yeah, new version numbering scheme borrowed from Ubuntu releases. :)

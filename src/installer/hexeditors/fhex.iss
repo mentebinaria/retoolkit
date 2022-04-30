@@ -1,4 +1,5 @@
 ; v3.0.0
+; https://github.com/echo-devim/fhex
 
 [Components]
 Name: "hexeditors\fhex"; Description: "Fhex"; Types: full;

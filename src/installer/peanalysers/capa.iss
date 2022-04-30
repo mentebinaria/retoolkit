@@ -1,4 +1,4 @@
-; v3.0.1
+; v3.2.0
 ; https://github.com/mandiant/capa
 
 [Components]

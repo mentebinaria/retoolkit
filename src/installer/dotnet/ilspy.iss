@@ -1,4 +1,4 @@
-; v7.1.0.6543
+; v7.2.1.6856
 
 [Components]
 Name: "dotnet\ilspy"; Description: "ILSpy"; Types: full;

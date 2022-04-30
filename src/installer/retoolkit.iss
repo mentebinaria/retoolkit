@@ -1,8 +1,8 @@
 #define MyAppName "retoolkit"
-#define MyAppVersion "2021.10"
-#define MyAppPublisher "Mente Binária"
+#define MyAppVersion "2022.04"
+#define MyAppPublisher "Mente Binï¿½ria"
 #define MyAppURL "https://github.com/mentebinaria/retoolkit"
-#define MySrcDir "c:\tools\ret\"
+#define MySrcDir "d:\ret\"
 
 [Setup]
 AppId={{BB46345D-F5E9-408E-AA39-64A5EDD92E30}
@@ -38,7 +38,6 @@ Name: "cobaltstrike"; Description: "Cobalt Strike beacon analysis"; Types: full;
 [Components]
 Name: "debuggers"; Description: "Debuggers"; Types: full;
 #include "debuggers\cutter.iss"
-#include "debuggers\hyperdbg.iss"
 #include "debuggers\x64dbg.iss"
 
 [Components]
@@ -52,9 +51,13 @@ Name: "delphi"; Description: "Delphi Tools"; Types: full;
 [Components]
 Name: "dotnet"; Description: "Dotnet Tools"; Types: full;
 #include "dotnet\de4dot.iss"
-#include "dotnet\dnspy.iss"
 #include "dotnet\dnspyex.iss"
 #include "dotnet\ilspy.iss"
+#include "dotnet\rundotnetdll.iss"
+
+[Components]
+Name: "elf"; Description: "ELF Tools"; Types: full;
+#include "elf\elfparserng.iss"
 
 [Components]
 Name: "hexeditors"; Description: "Hex Editors"; Types: full;
@@ -67,7 +70,6 @@ Name: "java"; Description: "Java decompilers"; Types: full;
 #include "java\jadx.iss"
 #include "java\jdgui.iss"
 #include "java\recaf.iss"
-#include "java\threadtear.iss"
 
 [Components]
 Name: "ole"; Description: "OLE/Compound File Binary File analysis (.msi, .doc, etc)"; Types: full;
@@ -78,7 +80,7 @@ Name: "ole"; Description: "OLE/Compound File Binary File analysis (.msi, .doc, e
 
 [Components]
 Name: "network"; Description: "Network tools"; Types: full;
-#include "network\bewareircd.iss"
+#include "network\echomirage.iss"
 
 [Components]
 Name: "pdf"; Description: "PDF tools"; Types: full;
@@ -108,8 +110,8 @@ Name: "processmonitors"; Description: "Process monitors"; Types: full;
 
 [Components]
 Name: "programming"; Description: "Programming"; Types: full;
-#include "programming\fasm.iss"
 #include "programming\devcpp.iss"
+#include "programming\fasm.iss"
 #include "programming\winpython.iss"
 
 [Components]
@@ -127,9 +129,12 @@ Name: "unpacking"; Description: "Unpacking"; Types: full;
 Name: "utilities"; Description: "Utilities"; Types: full;
 #include "utilities\7zip.iss"
 #include "utilities\cyberchef.iss"
+#include "utilities\entropy.iss"
 #include "utilities\errorlookup.iss"
-#include "utilities\jre.iss"
+#include "utilities\forcetoolkit.iss"
+#include "utilities\jdk.iss"
 #include "utilities\manw.iss"
+#include "utilities\npp.iss"
 #include "utilities\vt.iss"
 #include "utilities\winapiexec.iss"
 
@@ -209,7 +214,6 @@ begin
       if WizardIsComponentSelected('utilities\winapiexec') then EnvAddPath(ExpandConstant('{app}') + '\utilities\winapiexec');
       if WizardIsComponentSelected('ole\officemalscanner') then EnvAddPath(ExpandConstant('{app}') + '\ole\officemalscanner');
       if WizardIsComponentSelected('android\dex2jar') then EnvAddPath(ExpandConstant('{app}') + '\android\dex2jar');
-      if WizardIsComponentSelected('debuggers\hyperdbg') then EnvAddPath(ExpandConstant('{app}') + '\debuggers\hyperdbg');
       if WizardIsComponentSelected('processmonitors\pesieve') then EnvAddPath(ExpandConstant('{app}') + '\processmonitors\pesieve');
       if WizardIsComponentSelected('processmonitors\hollowshunter') then EnvAddPath(ExpandConstant('{app}') + '\processmonitors\hollowshunter');
       EnvAddPath(ExpandConstant('{app}') + '\bin');
@@ -225,7 +229,6 @@ begin
       EnvRemovePath(ExpandConstant('{app}') + '\utilities\winapiexec');
       EnvRemovePath(ExpandConstant('{app}') + '\ole\officemalscanner');
       EnvRemovePath(ExpandConstant('{app}') + '\android\dex2jar');
-      EnvRemovePath(ExpandConstant('{app}') + '\debugger\hyperdbg');
       EnvRemovePath(ExpandConstant('{app}') + '\processmonitors\pesieve');
       EnvRemovePath(ExpandConstant('{app}') + 'processmonitors\hollowshunter');
       EnvRemovePath(ExpandConstant('{app}') + '\bin');

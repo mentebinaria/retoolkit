@@ -1,4 +1,5 @@
 ; v2.15 Build(212)
+; https://files.planet-dl.org/Cw2k/MyAutToExe/index.html
 
 [Components]
 Name: "autoit\myauttoexe"; Description: "myAutToExe"; Types: full;

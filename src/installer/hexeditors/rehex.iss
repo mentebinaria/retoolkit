@@ -1,4 +1,5 @@
-; v0.3.92
+; v0.5.0
+; https://github.com/solemnwarning/rehex
 
 [Components]
 Name: "hexeditors\rehex"; Description: "Reverse Engineers' Hex Editor"; Types: full compact;

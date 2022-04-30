@@ -1,4 +1,5 @@
-; v1.10.0
+; v1.17.0
+; https://github.com/WerWolv/ImHex
 
 [Components]
 Name: "hexeditors\imhex"; Description: "ImHex"; Types: full; Check: Is64BitInstallMode
