@@ -4,7 +4,7 @@ __English__ | [中文简体](./README_zh_CN.md) | [Français](./README_fr_FR.md)
 
 ## What?
 
-This is a collection of tools you may like if you are interested on reverse engineering and/or malware analysis on x86 and x64 Windows systems. After installing this program, you'll have two ways to access the tools:
+This is a collection of tools you may like if you are interested in reverse engineering and/or malware analysis on x86 and x64 Windows systems. After installing this program, you'll have two ways to access the tools:
 
 * Double-click the `retoolkit` icon in the Desktop.
 * Right-click on a file, choose `Send to -> retoolkit`. This way the selected file is passed as argument to the desired program.
@@ -13,7 +13,7 @@ This is a collection of tools you may like if you are interested on reverse engi
 
 ## Why do I need it?
 
-You don't. Obviously, you can download such tools from their own website and install them by yourself in a new VM. But if you download retoolkit, it can probably save you some time. Additionally, the tools come pre-configured so you'll find things like x64dbg with a few plugins, command-line tools working from any directory, etc. You may like it if you're setting up a new analysis VM.
+You don't. Obviously, you can download such tools from their own website and install them by yourself in a new VM. But if you download retoolkit, it will probably save you some time. Additionally, the tools come pre-configured so you'll find things like x64dbg with a few plugins, command-line tools working from any directory, etc. You may like it if you're setting up a new analysis VM.
 
 ## Download
 
@@ -29,7 +29,7 @@ I don't know. Some included tools are not open source and come from shady places
 
 ## Can you add tool X?
 
-It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, and the license allows us to redistribuite the software, please [open an issue here](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) if it doesn't exist yet.
+It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, and the license allows us to redistribute the software, please [open an issue here](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) if it doesn't exist yet.
 
 ## Changelog
 
@@ -85,7 +85,7 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
 * Better organization based on target file type.
 * New context menu (right-click on a file -> Send to -> retoolkit).
 * Removed Start Menu shortcuts.
-* Tools updated to the latest version.
+* Tools updated to their latest version.
 * Updated Error Lookup tool to a different one, with more features.
 * fasm now opens .asm files if you double-click them.
 
