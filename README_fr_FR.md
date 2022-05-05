@@ -1,4 +1,4 @@
-English | [中文简体](./README_zh_CN.md) | [Français](./README_fr_FR.md)
+Français | [English](./README.md) | [中文简体](./README_zh_CN.md)
 
 # Reverse Engineer's Toolkit
 
