@@ -90,4 +90,4 @@ Bu değişkendir. Anafikir projeyi basit tutmaktır. Sadece burada olmadığınd
 * fasm artık .asm dosyalarına çift tıklandığında onları açabiliyor.
 
 ### v2021c
-* İlk kamu yayını.
+* İlk kamu yayını
