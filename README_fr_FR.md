@@ -1,6 +1,6 @@
-English | [中文简体](./README_zh_CN.md) | [Français](./README_fr_FR.md)
+__Français__ | [English](./README.md) | [中文简体](./README_zh_CN.md)
 
-# Reverse Engineer's Toolkit
+# Boîte à outils du rétro-ingénieur
 
 ## Quoi ?
 
