@@ -1,5 +1,7 @@
 __Türkçe__ || [English](./README.md) || [Français](./README_fr_FR.md) || [中文简体](./README_zh_CN.md)
 
+___Çeviren: [Şefik Efe](https://github.com/f4T1H21)___
+
 # Tersine Mühendis'in Araç Takımı
 
 ## Nedir?
