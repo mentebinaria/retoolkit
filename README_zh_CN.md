@@ -1,4 +1,4 @@
-中文简体 | [English](./README.md) | [Français](./README_fr_FR.md)
+__中文简体__ | [English](./README.md) | [Français](./README_fr_FR.md)
 
 # 逆向工程师的工具包
 
