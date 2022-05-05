@@ -1,3 +1,5 @@
+__Türkçe__ || [English](./README.md) || [Français](./README_fr_FR.md) || [中文简体](./README_zh_CN.md)
+
 # Tersine Mühendis'in Araç Takımı
 
 ## Nedir?
