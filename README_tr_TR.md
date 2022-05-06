@@ -17,7 +17,7 @@ x86 ve x64 Windows sistemlerde tersine mühendislik ve/veya zararlı yazılım a
 
 İhtiyacınız yok. Açıkçası, yeni bir sanal makine içerisine bu tür araçları kendi web sitelerinden indirebilirsiniz. Ama eğer retoolkit'i indirirseniz, muhtemelen zamandan tasarruf edersiniz. Buna ilaveten, araçlar önceden yapılandırıldığından dolayı; birkaç eklentiye sahip x64dbg, her dizinden çalışan komut satırı araçları vb. gibi şeyler bulacaksınız. Eğer yeni bir analiz sanal makinesi kuruyorsanız, bunu beğenebilirsiniz.
 
-# İndir
+# İndirmek için
 
 Görmüş olduğunuz *.iss dosyaları, [Inno Setup](https://jrsoftware.org/isinfo.php) ile oluşturulmuş kurulum dosyamızın kaynak kodlarıdır. Aracın kendisini indirmek için, [Yayınlar](https://github.com/mentebinaria/retoolkit/releases) bölümüne gidip kurulum programını indirmelisiniz.
 
@@ -31,7 +31,7 @@ Bilmiyorum. Dahil edilen araçlardan bazıları açık kaynak değil ve karanlı
 
 # X aracını ekleyebilir miyim?
 
-Bu değişkendir. Anafikir projeyi basit tutmaktır. Sadece burada olmadığından dolayı bir aracı ekleyemeyiz. Ama eğer iyi bir sebebinizin olduğunu düşünüyorsanız, ve lisans bize yazılımı yeniden dağıtmak için izin verirse, lütfen [buradan yeni bir konu açın](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+)
+Bu değişkendir. Ana fikir projeyi basit tutmaktır. Sadece burada olmadığından dolayı bir aracı ekleyemeyiz. Ama eğer iyi bir sebebinizin olduğunu düşünürseniz, ve lisans bize yazılımı yeniden dağıtmak için izin verirse, lütfen [buradan yeni bir konu açın](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+).
 
 # Değişim kütüğü
 
