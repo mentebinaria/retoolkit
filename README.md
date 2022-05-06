@@ -38,11 +38,11 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
 * Added:
     * Echo Mirage.
     * elfparser-ng.
-    * entropy (closes [#47](https://github.com/mentebinaria/retoolkit/issues/47)).
+    * entropy \[[#47](https://github.com/mentebinaria/retoolkit/issues/47)\].
     * Force Toolkit.
     * MiniDump x64dbg plugin.
     * Notepad++.
-    * OllyDumpEx x64dbg plugin (closes [#41](https://github.com/mentebinaria/retoolkit/issues/41)).
+    * OllyDumpEx x64dbg plugin \[[#41](https://github.com/mentebinaria/retoolkit/issues/41)\].
 * Removed:
     * Bewareircd: Too specific to analyze (now rare?) IRC-based communications.
     * dnSpy: Replaced by dnSpyEx.
@@ -56,7 +56,7 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
 * Reorganized MSI analysis tools under OLE tools section.
 * Updated current tools.
 * Fixed pev PATH.
-* Fixed license SendTo+ license issue (closes [#34](https://github.com/mentebinaria/retoolkit/issues/34)).
+* Fixed SendTo+ license issue \[[#34](https://github.com/mentebinaria/retoolkit/issues/34)\].
 * Lots of new functions added to SlothBP x64dbg plugin configuration.
 * New DIE signatures added.
 * Tools added:
@@ -66,7 +66,7 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
     * XLMMacroDeobfuscator.
     * dnSpyEx (new, maintained dnSpy fork).  
     * oledump.
-    * oletools (closes [#33](https://github.com/mentebinaria/retoolkit/issues/33)).
+    * oletools \[[#33](https://github.com/mentebinaria/retoolkit/issues/33)\].
     * pdfid.py.
     * pdf-parser.py
     * MapoAnalyzer x64dbg plugin.
