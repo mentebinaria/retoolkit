@@ -1,4 +1,5 @@
 ; v6.1.9
+; https://github.com/JohnZhaoXiaoHu/dnSpyEx
 
 [Components]
 Name: "dotnet\dnspyex"; Description: "dnSpyEx"; Types: full;

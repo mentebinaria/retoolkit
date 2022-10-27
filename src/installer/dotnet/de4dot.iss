@@ -1,4 +1,5 @@
 ; v3.1.41592.3405
+; https://github.com/de4dot/de4dot
 
 [Components]
 Name: "dotnet\de4dot"; Description: "de4dot"; Types: full;

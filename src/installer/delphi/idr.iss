@@ -1,4 +1,5 @@
 ; v01.04.2017
+; https://github.com/crypto2011/IDR
 
 [Components]
 Name: "delphi\idr"; Description: "Interactive Delphi Reconstructor"; Types: full;

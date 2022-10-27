@@ -1,4 +1,5 @@
 ; v7.2.1.6856
+; https://github.com/icsharpcode/ILSpy
 
 [Components]
 Name: "dotnet\ilspy"; Description: "ILSpy"; Types: full;
