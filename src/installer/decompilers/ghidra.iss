@@ -1,4 +1,5 @@
-; v10.1.3
+; v10.1.5
+; https://github.com/NationalSecurityAgency/ghidra/
 
 [Components]
 Name: "decompilers\ghidra"; Description: "Ghidra"; Types: full; Check: Is64BitInstallMode
@@ -9,3 +10,5 @@ Source: "{#MySrcDir}\decompilers\ghidra\*"; DestDir: "{app}\decompilers\ghidra";
 [Icons]
 Name: "{group}\{#MyAppName}\Ghidra"; Filename: "{app}\decompilers\ghidra\ghidraRun.bat"; Components: "decompilers\ghidra"; IconFilename: "{app}\decompilers\ghidra\support\ghidra.ico"; Check: Is64BitInstallMode
 Name: "{app}\sendto+\sendto\Decompilers\Ghidra"; Filename: "{app}\decompilers\ghidra\ghidraRun.bat"; Components: "decompilers\ghidra"; IconFilename: "{app}\decompilers\ghidra\support\ghidra.ico"; Check: Is64BitInstallMode
+; Documentation
+Name: "{app}\sendto+\sendto\Documentation\Ghidra"; Filename: "{app}\decompilers\ghidra\docs"; Components: "decompilers\ghidra"

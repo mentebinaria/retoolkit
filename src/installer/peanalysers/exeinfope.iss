@@ -1,5 +1,5 @@
-; v0.0.6.5
-; http://www.exeinfo.xn.pl (down?)
+; v0.0.7.2
+; http://www.exeinfo.o7.pl/
 
 [Components]
 Name: "peanalysers\exeinfope"; Description: "Exeinfo PE"; Types: full;

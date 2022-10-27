@@ -1,4 +1,4 @@
-; v3.0.4
+; v3.0.6
 ; https://github.com/horsicq/DIE-engine
 
 [Components]

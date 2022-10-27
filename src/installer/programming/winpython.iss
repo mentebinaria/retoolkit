@@ -1,4 +1,4 @@
-; v4.6.20220116
+; v5.0.20221023
 ; https://github.com/winpython/winpython
 
 [Components]
