@@ -3,20 +3,22 @@
 ## 2022.10
 
 * Added tools:
+    * AutoIt-Ripper.
     * Bazzar \[[#51](https://github.com/mentebinaria/retoolkit/issues/51)\].
     * ExtremeDumper \[[#56](https://github.com/mentebinaria/retoolkit/issues/56)\].
     * HxD.
     * HyperDbg \[[#53](https://github.com/mentebinaria/retoolkit/issues/53)\].
     * OpenHashTab.
-    * xSelectBlock x64dbg plugin, removed by mistake.
+    * WinAPI Search.
+    * xSelectBlock x64dbg plugin, previously removed by mistake.
 
 * Removed tools:
     * MiniDump x64dbg plugin \[[#58](https://github.com/mentebinaria/retoolkit/issues/58)\].
 
 * Imrovements:
     * `CTRL+R` now opens retoolkit context menu.
+    * Added a CHECKSUMS.txt file with the SHA-1 hashes from all files installed \[[#44](https://github.com/mentebinaria/retoolkit/issues/44)\].
     * New `Documentation` menu with useful reading for reversers.
-    * Reproducible builds \[[#44](https://github.com/mentebinaria/retoolkit/issues/44)\].
     * The setup program can create a shortcut to `cmd.exe` on Desktop.
     * Users can now choose which x64dbg plugins they want to install.
 
