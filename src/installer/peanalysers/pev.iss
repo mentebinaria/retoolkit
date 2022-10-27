@@ -5,8 +5,8 @@
 Name: "peanalysers\pev"; Description: "pev"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\peanalysers\pev\*"; DestDir: "{app}\pev"; Components: "peanalysers\pev"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\peanalysers\pev\*"; DestDir: "{app}\peanalysers\pev"; Components: "peanalysers\pev"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{group}\pev"; Filename: "{app}\pev\run.bat"; WorkingDir: "{app}\pev"; Components: "peanalysers\pev"
-Name: "{app}\sendto+\sendto\PE analysers\pev"; Filename: "{app}\pev\run.bat"; WorkingDir: "{app}\pev"; Components: "peanalysers\pev"
+Name: "{group}\pev"; Filename: "{app}\peanalysers\pev\run.bat"; WorkingDir: "{app}\peanalysers\pev"; Components: "peanalysers\pev"
+Name: "{app}\sendto+\sendto\PE analysers\pev"; Filename: "{app}\peanalysers\pev\run.bat"; WorkingDir: "{app}\peanalysers\pev"; Components: "peanalysers\pev"
