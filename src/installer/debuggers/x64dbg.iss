@@ -2,7 +2,7 @@
 ; https://x64dbg.com/
 
 [Components]
-Name: "debuggers\x64dbg"; Description: "x64dbg + plugins + scripts"; Types: full compact;
+Name: "debuggers\x64dbg"; Description: "x64dbg"; Types: full compact;
 
 [Files]
 Source: "{#MySrcDir}\debuggers\x64dbg\*"; DestDir: "{app}\debuggers\x64dbg"; Components: "debuggers\x64dbg"; Flags: ignoreversion recursesubdirs createallsubdirs
@@ -13,10 +13,17 @@ Name: "{app}\sendto+\sendto\Debuggers\x64dbg"; Filename: "{app}\debuggers\x64dbg
 ; Documentation
 Name: "{app}\sendto+\sendto\Documentation\x64dbg"; Filename: "{app}\debuggers\x64dbg\release\x64dbg.chm"; Components: "debuggers\x64dbg"
 
+; Scripts
+
+[Components]
+Name: "debuggers\x64dbg\scripts"; Description: "x64dbg Scripts"; Types: full;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\scripts\*"; DestDir: "{app}\debuggers\x64dbg\scripts"; Components: "debuggers\x64dbg\scripts"; Flags: ignoreversion recursesubdirs createallsubdirs
+
 ; Plugins
 
 [Components]
-Name: "debuggers\x64dbg\plugins"; Description: "x64dbg plugins"; Types: full compact;
+Name: "debuggers\x64dbg\plugins"; Description: "x64dbg Plugins"; Types: full compact;
 
 ; ASLR Removal v1.0
 ; https://github.com/AandersonL/x64dbg-ASLR-Removal

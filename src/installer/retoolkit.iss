@@ -22,11 +22,11 @@ SetupIconFile="..\..\assets\retoolkit.ico"
 ArchitecturesInstallIn64BitMode=x64
 
 [Components]
-Name: "android"; Description: "Android tools"; Types: full;
+Name: "android"; Description: "Android Tools"; Types: full;
 #include "android\dex2jar.iss"
 
 [Components]
-Name: "autoit"; Description: "AutoIt decompilers"; Types: full;
+Name: "autoit"; Description: "AutoIt Decompilers"; Types: full;
 #include "autoit\exe2aut.iss"
 #include "autoit\myauttoexe.iss"
 
@@ -69,7 +69,7 @@ Name: "hexeditors"; Description: "Hex Editors"; Types: full;
 #include "hexeditors\rehex.iss"
 
 [Components]
-Name: "java"; Description: "Java decompilers"; Types: full;
+Name: "java"; Description: "Java Decompilers"; Types: full;
 #include "java\jadx.iss"
 #include "java\jdgui.iss"
 #include "java\recaf.iss"
@@ -101,6 +101,7 @@ Name: "peanalysers"; Description: "PE analysers"; Types: full;
 #include "peanalysers\pev.iss"
 #include "peanalysers\redress.iss"
 #include "peanalysers\reshack.iss"
+#include "peanalysers\winapisearch.iss"
 
 [Components]
 Name: "processmonitors"; Description: "Process monitors"; Types: full;
