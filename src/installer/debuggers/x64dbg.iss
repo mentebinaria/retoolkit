@@ -1,4 +1,4 @@
-; snapshot_2022-04-11_01-01
+; snapshot_2022-10-18_22-09
 ; https://x64dbg.com/
 
 [Components]
@@ -10,3 +10,103 @@ Source: "{#MySrcDir}\debuggers\x64dbg\*"; DestDir: "{app}\debuggers\x64dbg"; Com
 [Icons]
 Name: "{group}\{#MyAppName}\x64dbg"; Filename: "{app}\debuggers\x64dbg\release\x96dbg.exe"; Components: "debuggers\x64dbg"
 Name: "{app}\sendto+\sendto\Debuggers\x64dbg"; Filename: "{app}\debuggers\x64dbg\release\x96dbg.exe"; Components: "debuggers\x64dbg"
+; Documentation
+Name: "{app}\sendto+\sendto\Documentation\x64dbg"; Filename: "{app}\debuggers\x64dbg\release\x64dbg.chm"; Components: "debuggers\x64dbg"
+
+; Plugins
+
+[Components]
+Name: "debuggers\x64dbg\plugins"; Description: "x64dbg plugins"; Types: full compact;
+
+; ASLR Removal v1.0
+; https://github.com/AandersonL/x64dbg-ASLR-Removal
+[Components]
+Name: "debuggers\x64dbg\plugins\aslr_removal"; Description: "ASLR Removal"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\aslr_removal\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\aslr_removal"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\aslr_removal\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\aslr_removal"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; Checksec v0.1
+; https://github.com/klks/checksec
+[Components]
+Name: "debuggers\x64dbg\plugins\checksec"; Description: "checksec"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\checksec\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\checksec"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\checksec\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\checksec"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; MapoAnalyzer v1.3
+; http://maposafe.net/index/news/show/id/14.html
+[Components]
+Name: "debuggers\x64dbg\plugins\mapoanalyzer"; Description: "MapoAnalyzer"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\mapoanalyzer\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\mapoanalyzer"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\mapoanalyzer\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\mapoanalyzer"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; Multiline Ultimate Assembler v2.3.6
+; https://github.com/m417z/Multiline-Ultimate-Assembler
+[Components]
+Name: "debuggers\x64dbg\plugins\multiasm"; Description: "Multiline Ultimate Assembler"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\multiasm\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\multiasm"; Flags: ignoreversion recursesubdirs createallsubdirs
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\multiasm\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\multiasm"; Flags: ignoreversion recursesubdirs createallsubdirs
+[Icons]
+Name: "{app}\sendto+\sendto\Documentation\Multiline Ultimate Assembler"; Filename: "{app}\documentation\multiasm.chm"; Components: "debuggers\x64dbg\plugins\multiasm"
+
+; OllyDumpEx v1.82
+; http://low-priority.appspot.com/ollydumpex/
+[Components]
+Name: "debuggers\x64dbg\plugins\ollydumpex"; Description: "OllyDumpEx"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\ollydumpex\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\ollydumpex"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\ollydumpex\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\ollydumpex"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; ScyllaHide v2021-08-23_13-27-50
+; https://github.com/x64dbg/ScyllaHide
+[Components]
+Name: "debuggers\x64dbg\plugins\scyllahide"; Description: "ScyllaHide"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\scyllahide\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\scyllahide"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\scyllahide\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\scyllahide"; Flags: ignoreversion recursesubdirs createallsubdirs
+[Icons]
+Name: "{app}\sendto+\sendto\Documentation\ScyllaHide"; Filename: "{app}\documentation\ScyllaHide.pdf"; Components: "debuggers\x64dbg\plugins\scyllahide"
+
+; SlothBP v1.0.21
+; https://github.com/x64dbg/SlothBP
+[Components]
+Name: "debuggers\x64dbg\plugins\slothbp"; Description: "SlothBP"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\slothbp\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\slothbp"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\slothbp\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\slothbp"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; SwissArmyKnife v9-26-2020
+; https://github.com/Nukem9/SwissArmyKnife
+[Components]
+Name: "debuggers\x64dbg\plugins\swissarmyknife"; Description: "SwissArmyKnife"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\swissarmyknife\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\swissarmyknife"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\swissarmyknife\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\swissarmyknife"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; xAnalyzer v2.5.6
+; https://github.com/ThunderCls/xAnalyzer
+[Components]
+Name: "debuggers\x64dbg\plugins\xanalyzer"; Description: "xAnalyzer"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\xanalyzer\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\xanalyzer"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\xanalyzer\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\xanalyzer"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; xSelectBlock v0.1
+; https://github.com/morsisko/xSelectBlock
+[Components]
+Name: "debuggers\x64dbg\plugins\xselectblock"; Description: "xSelectBlock"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\xselectblock\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\xselectblock"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\xselectblock\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\xselectblock"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; YaraGen v0.1
+; https://github.com/mrexodia/YaraGen
+[Components]
+Name: "debuggers\x64dbg\plugins\yaragen"; Description: "YaraGen"; Types: full compact;
+[Files]
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\yaragen\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\yaragen"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\yaragen\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\yaragen"; Flags: ignoreversion recursesubdirs createallsubdirs
