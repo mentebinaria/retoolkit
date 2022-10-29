@@ -32,45 +32,4 @@ __中文简体__ || [Türkçe](./README_tr_TR.md) || [English](./README.md) || [
 这取决于。我们的想法是让它保持简单。我们不会因为一个工具还不在这里就添加它。但如果你认为有一个很好的理由这样做，而且许可证允许我们重新分配软件，如果它还没有退出，请在这里提一个 [issue](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) 。
 
 ## 更新日志
-### 2021.10
-
-* 是的，从Ubuntu版本中借用的新版本编号方案。 :)
-* 已重新组织OLE工具部分下的MSI分析工具。
-* 更新了当前工具。 
-* 修正了pev PATH。
-* 修正了SendTo+的许可证问题 (关闭 [#34](https://github.com/mentebinaria/retoolkit/issues/34)).
-* SlothBP x64dbg插件配置中增加了许多新功能。
-* 增加了新的DIE签名。
-* 添加的工具:
-    * Dev-C++编译器
-    * Java工具需要的Java 8运行环境.
-    * Python 3 (via WinPython), 主要是支持基于Python的工具.
-    * XLMMacroDeobfuscator.
-    * dnSpyEx (新的、维护的dnSpy fork).  
-    * oledump.
-    * oletools (关闭 [#33](https://github.com/mentebinaria/retoolkit/issues/33)).
-    * pdfid.py.
-    * pdf-parser.py
-    * MapoAnalyzer x64dbg 插件.
-    * xSelectBlock x64dbg 插件.
-    * redress.
-    * hollows_hunter.
-    * HyperDbg.
-    * Threadtear.
-    * 1768.py.
-    * dex2jar.
-### v2021d
-
-* 根据目标文件类型进行更好的分类。
-* 删除了开始菜单的快捷方式。
-* 新的上下文菜单（右键单击文件 -> 发送到 -> retoolkit）。
-* fasm现在可以打开.asm文件，如果你双击它们。
-* 新增工具：JADX、Cutter和PE-eve。
-* 工具升级到了最新版本。
-* 更新了错误查询工具，使其具有更多的功能。
-* 一些工具的路径被添加到用户的PATH环境变量中。
-* 新的图标。感谢 [@pauloarruzzo](https://twitter.com/pauloarruzzo).
-
-### v2021c
-
-* 首次公开发布。
+阅读此文档： [CHANGELOG.md](CHANGELOG.md).
