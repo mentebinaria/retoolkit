@@ -1,4 +1,4 @@
-; snapshot_2022-10-18_22-09
+; snapshot_2023-03-04_02-26
 ; https://x64dbg.com/
 
 [Components]
@@ -25,14 +25,6 @@ Source: "{#MySrcDir}\debuggers\x64dbg\scripts\*"; DestDir: "{app}\debuggers\x64d
 [Components]
 Name: "debuggers\x64dbg\plugins"; Description: "x64dbg Plugins"; Types: full compact;
 
-; ASLR Removal v1.0
-; https://github.com/AandersonL/x64dbg-ASLR-Removal
-[Components]
-Name: "debuggers\x64dbg\plugins\aslr_removal"; Description: "ASLR Removal"; Types: full compact;
-[Files]
-Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\aslr_removal\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\aslr_removal"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\aslr_removal\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\aslr_removal"; Flags: ignoreversion recursesubdirs createallsubdirs
-
 ; Checksec v0.1
 ; https://github.com/klks/checksec
 [Components]
@@ -42,7 +34,7 @@ Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\checksec\*"; DestDir: "{app}\de
 Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\checksec\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\checksec"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; MapoAnalyzer v1.3
-; http://maposafe.net/index/news/show/id/14.html
+; http://maposafe.net/index/news/show/id/14.html (down)
 [Components]
 Name: "debuggers\x64dbg\plugins\mapoanalyzer"; Description: "MapoAnalyzer"; Types: full compact;
 [Files]
@@ -68,7 +60,7 @@ Name: "debuggers\x64dbg\plugins\ollydumpex"; Description: "OllyDumpEx"; Types: f
 Source: "{#MySrcDir}\debuggers\x64dbg\plugins\32\ollydumpex\*"; DestDir: "{app}\debuggers\x64dbg\release\x32\plugins"; Components: "debuggers\x64dbg\plugins\ollydumpex"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\ollydumpex\*"; DestDir: "{app}\debuggers\x64dbg\release\x64\plugins"; Components: "debuggers\x64dbg\plugins\ollydumpex"; Flags: ignoreversion recursesubdirs createallsubdirs
 
-; ScyllaHide v2021-08-23_13-27-50
+; ScyllaHide v2023-03-24_13-03
 ; https://github.com/x64dbg/ScyllaHide
 [Components]
 Name: "debuggers\x64dbg\plugins\scyllahide"; Description: "ScyllaHide"; Types: full compact;

@@ -1,4 +1,4 @@
-; v0.3.4
+; v0.3.5
 ; https://github.com/hasherezade/hollows_hunter
 
 [Components]

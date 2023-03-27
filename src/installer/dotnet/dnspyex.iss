@@ -1,14 +1,15 @@
-; v6.1.9
-; https://github.com/JohnZhaoXiaoHu/dnSpyEx
+; v6.3.0
+; https://github.com/dnSpyEx/dnSpy
 
 [Components]
 Name: "dotnet\dnspyex"; Description: "dnSpyEx"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\dotnet\dnSpyEx\*"; DestDir: "{app}\dotnet\dnSpyEx"; Components: "dotnet\dnspyex"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\dotnet\dnSpyEx\dnSpy-net-win32\*"; DestDir: "{app}\dotnet\dnSpyEx\dnSpy-net-win32"; Components: "dotnet\dnspyex"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\dotnet\dnSpyEx\dnSpy-net-wi64\*"; DestDir: "{app}\dotnet\dnSpyEx\dnSpy-net-win64"; Components: "dotnet\dnspyex"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{group}\{#MyAppName}\dnSpyEx (x86))"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-x86.exe"; Components: "dotnet\dnspyex"
-Name: "{app}\sendto+\sendto\Dotnet\dnSpyEx (x86)"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-x86.exe"; Components: "dotnet\dnspyex"
-Name: "{group}\{#MyAppName}\dnSpyEx (x64)"; Filename: "{app}\dotnet\dnSpyEx\dnSpy.exe"; Components: "dotnet\dnspyex"; Check: Is64BitInstallMode
-Name: "{app}\sendto+\sendto\Dotnet\dnSpyEx (x64)"; Filename: "{app}\dotnet\dnSpyEx\dnSpy.exe"; Components: "dotnet\dnspyex"; Check: Is64BitInstallMode
+Name: "{group}\{#MyAppName}\dnSpyEx (x86))"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win32\dnSpy.exe"; Components: "dotnet\dnspyex"
+Name: "{app}\sendto+\sendto\Dotnet\dnSpyEx (x86)"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win32\dnSpy.exe"; Components: "dotnet\dnspyex"
+Name: "{group}\{#MyAppName}\dnSpyEx (x64))"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win64\dnSpy.exe"; Components: "dotnet\dnspyex"; Check: Is64BitInstallMode
+Name: "{app}\sendto+\sendto\Dotnet\dnSpyEx (x64)"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win64\dnSpy.exe"; Check: Is64BitInstallMode

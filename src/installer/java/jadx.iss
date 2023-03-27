@@ -1,4 +1,4 @@
-; v1.4.5
+; v1.4.6
 ; https://github.com/skylot/jadx
 
 [Components]

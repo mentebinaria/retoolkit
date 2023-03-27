@@ -1,5 +1,5 @@
-; v0.0.7.2
-; http://www.exeinfo.o7.pl/
+; v0.0.7.7
+; https://github.com/ExeinfoASL/ASL
 
 [Components]
 Name: "peanalysers\exeinfope"; Description: "Exeinfo PE"; Types: full;

@@ -1,4 +1,4 @@
-; v1.0.4.0
+; v1.0.5.0
 ; https://dennisbabkin.com/winapisearch/
 
 [Components]

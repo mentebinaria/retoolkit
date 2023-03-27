@@ -1,5 +1,5 @@
 #define MyAppName "retoolkit"
-#define MyAppVersion "2022.10"
+#define MyAppVersion "2023.04"
 #define MyAppPublisher "Mente Binária"
 #define MyAppURL "https://github.com/mentebinaria/retoolkit"
 #define MySrcDir "d:\ret\"

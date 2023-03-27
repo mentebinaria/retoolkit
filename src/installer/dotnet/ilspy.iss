@@ -1,4 +1,4 @@
-; v7.2.1.6856
+; v8.0 Preview 3
 ; https://github.com/icsharpcode/ILSpy
 
 [Components]
