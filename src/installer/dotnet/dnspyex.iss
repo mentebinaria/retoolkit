@@ -6,7 +6,7 @@ Name: "dotnet\dnspyex"; Description: "dnSpyEx"; Types: full;
 
 [Files]
 Source: "{#MySrcDir}\dotnet\dnSpyEx\dnSpy-net-win32\*"; DestDir: "{app}\dotnet\dnSpyEx\dnSpy-net-win32"; Components: "dotnet\dnspyex"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#MySrcDir}\dotnet\dnSpyEx\dnSpy-net-wi64\*"; DestDir: "{app}\dotnet\dnSpyEx\dnSpy-net-win64"; Components: "dotnet\dnspyex"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#MySrcDir}\dotnet\dnSpyEx\dnSpy-net-win64\*"; DestDir: "{app}\dotnet\dnSpyEx\dnSpy-net-win64"; Components: "dotnet\dnspyex"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{group}\{#MyAppName}\dnSpyEx (x86))"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win32\dnSpy.exe"; Components: "dotnet\dnspyex"
