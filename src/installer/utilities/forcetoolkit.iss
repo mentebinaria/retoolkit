@@ -1,4 +1,4 @@
-; v1.2.1.0
+; v1.2.0.1
 ; https://autoclose.net/forcetoolkit.html
 
 ; We extract the main executable form the original installer to make things easier
