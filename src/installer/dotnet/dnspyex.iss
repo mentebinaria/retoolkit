@@ -12,4 +12,4 @@ Source: "{#MySrcDir}\dotnet\dnSpyEx\dnSpy-net-win64\*"; DestDir: "{app}\dotnet\d
 Name: "{group}\{#MyAppName}\dnSpyEx (x86))"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win32\dnSpy.exe"; Components: "dotnet\dnspyex"
 Name: "{app}\sendto+\sendto\Dotnet\dnSpyEx (x86)"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win32\dnSpy.exe"; Components: "dotnet\dnspyex"
 Name: "{group}\{#MyAppName}\dnSpyEx (x64))"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win64\dnSpy.exe"; Components: "dotnet\dnspyex"; Check: Is64BitInstallMode
-Name: "{app}\sendto+\sendto\Dotnet\dnSpyEx (x64)"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win64\dnSpy.exe"; Check: Is64BitInstallMode
+Name: "{app}\sendto+\sendto\Dotnet\dnSpyEx (x64)"; Filename: "{app}\dotnet\dnSpyEx\dnSpy-net-win64\dnSpy.exe"; Components: "dotnet\dnspyex"; Check: Is64BitInstallMode

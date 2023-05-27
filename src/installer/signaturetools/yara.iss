@@ -1,4 +1,4 @@
-; v4.3.0
+; v4.3.1
 ; https://github.com/VirusTotal/yara
 
 [Components]

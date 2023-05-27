@@ -1,4 +1,4 @@
-; v0.0.73
+; v0.0.75
 ; https://blog.didierstevens.com/programs/oledump-py/
 
 [Components]

@@ -1,4 +1,4 @@
-; v10.2.3
+; v10.3
 ; https://github.com/NationalSecurityAgency/ghidra/
 
 [Components]
