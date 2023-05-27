@@ -1,5 +1,5 @@
 ; v1.2
-; https://rammichael.com/winapiexec
+; https://github.com/m417z/winapiexec
 
 [Components]
 Name: "utilities\winapiexec"; Description: "winapiexec "; Types: full;
