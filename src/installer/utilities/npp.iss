@@ -8,4 +8,10 @@ Name: "utilities\npp"; Description: "Notepad++"; Types: full;
 Source: "{#MySrcDir}\utilities\npp\*"; DestDir: "{app}\utilities\npp"; Components: "utilities\npp"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Run]
-Filename: "{app}\utilities\npp\npp.8.5.3.Installer.x64.exe"; Parameters: "/S"; Components: "utilities\npp"
+Filename: "{app}\utilities\npp\npp.8.5.3.Installer.x64.exe"; Parameters: "/S /D={app}\utilities\npp"; Components: "utilities\npp"; Check: Is64BitInstallMode
+
+[Icons]
+Name: "{app}\sendto+\sendto\Utilities\Notepad++"; Filename: "{app}\utilities\npp\notepad++.exe"; WorkingDir: "{app}\utilities\npp"; Components: "utilities\npp"
+
+[UninstallRun]
+Filename: "{app}\utilities\npp\uninstall.exe"; Parameters: "/S"; Components: "utilities\npp"
