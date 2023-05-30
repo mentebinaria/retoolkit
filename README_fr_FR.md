@@ -2,12 +2,12 @@ __Français__ || [Türkçe](./README_tr_TR.md) || [English](./README.md) || [中
 
 # Boîte à outils du rétro-ingénieur
 
-## Quoi ?
+## Qu'est-ce que c'est ?
 
-Il s'agit d'une collection d'outils qui pourraient vous intéresser si vous vous consacrez à la rétro-ingénierie et/ou à l'analyse des logiciels malveillants sur les systèmes Windows x86 et x64. Après avoir installé ce programme, vous devrez obtenir plusieurs moyens d'accéder aux outils :
+Il s'agit d'une collection d'outils qui pourraient vous intéresser si vous vous consacrez à la rétro-ingénierie et/ou à l'analyse des logiciels malveillants sur les systèmes Windows x86 et x64. Après avoir installé ce programme, vous obtiendrez plusieurs moyens d'accéder aux outils :
 
 * Double-clic sur l'icône `retoolkit` présent sur le Bureau.
-* Clic droit sur un fichier, choisissez `Envoyer vers -> retoolkit`. De cette manière, le fichier sélectionné est transmis comme argument au programme souhaité.
+* Clic droit sur un fichier, choisissez `Envoyer vers -> retoolkit`. De cette manière, le fichier sélectionné sera transmis comme argument au programme souhaité.
 
 ![](assets/retoolkit.gif)
 
@@ -17,7 +17,7 @@ Ce n'est pas le cas. Évidemment, vous pouvez télécharger ces outils depuis le
 
 ## Téléchargement
 
-Les fichiers *.iss que vous voyez ici sont le code source de notre programme d'installation construit avec [Inno Setup](https://jrsoftware.org/isinfo.php). Pour télécharger le vrai programme, vous devez aller dans la section [Releases](https://github.com/mentebinaria/retoolkit/releases) et télécharger le programme d'installation.
+Les fichiers *.iss que vous voyez ici sont le code source de notre programme d'installation construit avec [Inno Setup](https://jrsoftware.org/isinfo.php). Pour télécharger le vrai programme, allez dans la section [Releases](https://github.com/mentebinaria/retoolkit/releases) et téléchargez le programme d'installation.
 
 ## Outils intégrés
 
@@ -29,13 +29,12 @@ Je ne sais pas. Certains outils inclus ne sont pas open source et proviennent d'
 
 ## Pouvez-vous ajouter l'outil X ?
 
-Cela dépend. L'idée est de rester simple. Nous n'ajouterons pas un outil simplement parce qu'il n'existe pas encore. Mais si vous pensez qu'il y a une bonne raison de le faire et que la licence nous permet de redistribuer le logiciel, veuillez [ouvrir une issue ici](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) s'il n'existe pas encore.
-
+Cela dépend. L'idée est de rester simple. Nous n'ajouterons pas un outil simplement parce qu'il n'existe pas encore. Mais si vous pensez qu'il y a une bonne raison de le faire et que la licence nous permet de redistribuer le logiciel, veuillez [ouvrir une demande ici](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+).
 ## Historique des modifications
 
 ### 2021.10
 
-* Yeah, nouveau système de numérotation des versions emprunté aux versions Ubuntu :)
+* Nouveau système de numérotation des versions emprunté aux versions Ubuntu :)
 * Réorganisation des outils d'analyse MSI sous la section des outils OLE.
 * Mise à jour des outils actuels.
 * Correction du PATH de pev.
