@@ -29,7 +29,7 @@ I don't know. Some included tools are not open source and come from shady places
 
 ## Can you add tool X?
 
-It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, and the license allows us to redistribute the software, please [open an issue here](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) if it doesn't exist yet.
+It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, _and the license allows us to redistribute the software_, please [open an issue here](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) if it doesn't exist yet.
 
 ## Changelog
 

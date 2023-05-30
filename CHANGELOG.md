@@ -1,5 +1,40 @@
 # retoolkit Changelog
 
+## 2023.05
+
+* Added:
+    * 4n4lDetector
+    * de4dot GUI
+    * dll_to_exe
+    * DotDumper
+    * dumpulator Python library
+    * FakeNet-NG
+    * gftrace
+    * GoReSym
+    * mal_unpack
+    * Nmap (plus Zenmap, Ndiff, Ncat, and Nping)
+    * Observer
+    * pe_unmapper
+    * PEAnatomist
+    * Regshot
+    * requests Python library
+    * Stud_PE
+    * WinObjEx64
+    * x64dbg scripts for SecuROM and SafeDisc
+    * XNTSV
+    * XOpcodeCalc
+
+* Changes:
+    * Added `syskb*.bin` KB files to IDR folder \[[#78](https://github.com/mentebinaria/retoolkit/issues/78)\]
+    * Changed `Ctrl+R` shortcut to `Ctrl+``
+    * Cutter moved to Decompilers section
+    * de4dot added to `PATH`
+    * howllows_hunter added to `PATH`
+    * lessmsi added to `PATH`
+    * New Calculators section
+    * ProcessHacker became System Informer
+    * Python added to `PATH` \[[#75](https://github.com/mentebinaria/retoolkit/issues/75)\]
+
 ## 2022.10
 
 * Added tools:
