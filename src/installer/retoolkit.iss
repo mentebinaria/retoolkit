@@ -1,5 +1,5 @@
 #define MyAppName "retoolkit"
-#define MyAppVersion "2023.04"
+#define MyAppVersion "2023.05"
 #define MyAppPublisher "Mente Binária"
 #define MyAppURL "https://github.com/mentebinaria/retoolkit"
 #define MySrcDir "d:\ret\"
@@ -14,10 +14,10 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={userpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
-;PrivilegesRequired=lowest
+; PrivilegesRequired=lowest
 OutputBaseFilename={#MyAppName}_{#MyAppVersion}_setup
 WizardStyle=modern
-;Compression=none
+; Compression=none
 SetupIconFile="..\..\assets\retoolkit.ico"
 ArchitecturesInstallIn64BitMode=x64
 
@@ -31,18 +31,22 @@ Name: "autoit"; Description: "AutoIt Decompilers"; Types: full;
 #include "autoit\myauttoexe.iss"
 
 [Components]
-Name: "cobaltstrike"; Description: "Cobalt Strike beacon analysis"; Types: full;
+Name: "calculators"; Description: "Calculators"; Types: full;
+#include "calculators\xopcodecalc.iss"
+
+[Components]
+Name: "cobaltstrike"; Description: "Cobalt Strike Beacon Analysis"; Types: full;
 #include "cobaltstrike\1768.iss"
 #include "cobaltstrike\cobaltstrikescan.iss"
 
 [Components]
 Name: "debuggers"; Description: "Debuggers"; Types: full;
-#include "debuggers\cutter.iss"
 #include "debuggers\hyperdbg.iss"
 #include "debuggers\x64dbg.iss"
 
 [Components]
 Name: "decompilers"; Description: "Decompilers"; Types: full;
+#include "decompilers\cutter.iss"
 #include "decompilers\ghidra.iss"
 
 [Components]
@@ -53,6 +57,7 @@ Name: "delphi"; Description: "Delphi Tools"; Types: full;
 Name: "dotnet"; Description: "Dotnet Tools"; Types: full;
 #include "dotnet\de4dot.iss"
 #include "dotnet\dnspyex.iss"
+#include "dotnet\dotdumper.iss"
 #include "dotnet\extremedumper.iss"
 #include "dotnet\ilspy.iss"
 #include "dotnet\rundotnetdll.iss"
@@ -60,6 +65,12 @@ Name: "dotnet"; Description: "Dotnet Tools"; Types: full;
 [Components]
 Name: "elf"; Description: "ELF Tools"; Types: full;
 #include "elf\elfparserng.iss"
+
+[Components]
+Name: "go"; Description: "Go Tools"; Types: full;
+#include "go\gftrace.iss"
+#include "go\goresym.iss"
+#include "go\redress.iss"
 
 [Components]
 Name: "hexeditors"; Description: "Hex Editors"; Types: full;
@@ -82,35 +93,42 @@ Name: "ole"; Description: "OLE/Compound File Binary File analysis (.msi, .doc, e
 #include "ole\ssview.iss"
 
 [Components]
-Name: "network"; Description: "Network tools"; Types: full;
+Name: "network"; Description: "Network Tools"; Types: full;
+#include "network\fakenet.iss"
 #include "network\echomirage.iss"
+#include "network\nmap.iss"
 
 [Components]
-Name: "pdf"; Description: "PDF tools"; Types: full;
+Name: "pdf"; Description: "PDF Tools"; Types: full;
 #include "pdf\pdf-parser.iss"
 #include "pdf\pdfid.iss"
 
 [Components]
-Name: "peanalysers"; Description: "PE analysers"; Types: full;
-#include "peanalysers\capa.iss"
-#include "peanalysers\die.iss"
-#include "peanalysers\exeinfope.iss"
-#include "peanalysers\floss.iss"
-#include "peanalysers\pebear.iss"
-#include "peanalysers\pestudio.iss"
-#include "peanalysers\pev.iss"
-#include "peanalysers\redress.iss"
-#include "peanalysers\reshack.iss"
-#include "peanalysers\winapisearch.iss"
+Name: "pe"; Description: "PE Tools"; Types: full;
+#include "pe\4n4ldetector.iss"
+#include "pe\capa.iss"
+#include "pe\die.iss"
+#include "pe\dll_to_exe.iss"
+#include "pe\exeinfope.iss"
+#include "pe\floss.iss"
+#include "pe\pe_unmapper.iss"
+#include "pe\peanatomist.iss"
+#include "pe\pebear.iss"
+#include "pe\pestudio.iss"
+#include "pe\pev.iss"
+#include "pe\reshack.iss"
+#include "pe\stud_pe.iss"
+#include "pe\winapisearch.iss"
 
 [Components]
-Name: "processmonitors"; Description: "Process monitors"; Types: full;
-#include "processmonitors\apimonitor.iss"
-#include "processmonitors\filegrab.iss"
-#include "processmonitors\hollowshunter.iss"
-#include "processmonitors\pesieve.iss"
-#include "processmonitors\processhacker.iss"
-#include "processmonitors\sysexp.iss"
+Name: "processinspection"; Description: "Process Inspection"; Types: full;
+#include "processinspection\apimonitor.iss"
+#include "processinspection\filegrab.iss"
+#include "processinspection\hollowshunter.iss"
+#include "processinspection\pesieve.iss"
+#include "processinspection\observer.iss"
+#include "processinspection\systeminformer.iss"
+#include "processinspection\xntsv.iss"
 
 [Components]
 Name: "programming"; Description: "Programming"; Types: full;
@@ -119,12 +137,17 @@ Name: "programming"; Description: "Programming"; Types: full;
 #include "programming\winpython.iss"
 
 [Components]
-Name: "signaturetools"; Description: "Signature tools"; Types: full;
+Name: "signaturetools"; Description: "Signature Tools"; Types: full;
 #include "signaturetools\yara.iss"
+
+[Components]
+Name: "systeminformation"; Description: "System Information"; Types: full;
+#include "systeminformation\winobjex64.iss"
 
 [Components]
 Name: "unpacking"; Description: "Unpacking"; Types: full;
 #include "unpacking\novmp.iss"
+#include "unpacking\mal_unpack.iss"
 #include "unpacking\qunpack.iss"
 #include "unpacking\upx.iss"
 #include "unpacking\xvolkolak.iss"
@@ -143,6 +166,7 @@ Name: "utilities"; Description: "Utilities"; Types: full;
 #include "utilities\openhashtab.iss"
 #include "utilities\vt.iss"
 #include "utilities\winapiexec.iss"
+#include "utilities\regshot.iss"
 
 ; Use SendTo+ [https://github.com/lifenjoiner/sendto-plus/] for context menus
 ; as Windows limits the number of entries added via MUIVerb in Registry
@@ -172,7 +196,16 @@ Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python3.exe"; Tasks: ms
 
 [Tasks]
 Name: "addtopath"; Description: "Add programs to PATH (requires logging in again)";
-Name: "cmddesktop"; Description: "Create a shortcut to cmd.exe on desktop";
+Name: "cmddesktop"; Description: "Create a cmd.exe shortcut on desktop";
+Name: "msstorepython"; Description: "Delete useless python.exe from Microsoft Store";
+Name: "wub"; Description: "Disable Windows Update to reduce noise in network capture";
+
+[Files]
+Source: "{#MySrcDir}\utilities\wub\*.exe"; DestDir: "{app}\utilities\wub"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: wub
+
+[Run]
+Filename: "{app}\utilities\wub\Wub_x64.exe"; Parameters: "/D"; Check: Is64BitInstallMode; Tasks: wub
+Filename: "{app}\utilities\wub\Wub.exe"; Parameters: "/D"; Check: not Is64BitInstallMode; Tasks: wub
 
 [Code]
 procedure EnvAddPath(Path: string);
@@ -224,11 +257,14 @@ begin
       EnvAddPath(ExpandConstant('{app}') + '\bin');
       if WizardIsComponentSelected('android\dex2jar') then EnvAddPath(ExpandConstant('{app}') + '\android\dex2jar');
       if WizardIsComponentSelected('compilers\devcpp') then EnvAddPath(ExpandConstant('{app}') + '\compilers\devcpp\TDM-GCC-64\bin');
-      if WizardIsComponentSelected('dotnet\de4dot') then EnvAddPath(ExpandConstant('{app}') + '\dotnet\de4dot');
       if WizardIsComponentSelected('debuggers\hyperdbg') then EnvAddPath(ExpandConstant('{app}') + '\debuggers\hyperdbg');
+      if WizardIsComponentSelected('dotnet\de4dot') then EnvAddPath(ExpandConstant('{app}') + '\dotnet\de4dot');
+      if WizardIsComponentSelected('ole\lessmsi') then EnvAddPath(ExpandConstant('{app}') + '\ole\lessmsi');
       if WizardIsComponentSelected('ole\officemalscanner') then EnvAddPath(ExpandConstant('{app}') + '\ole\officemalscanner');
-      if WizardIsComponentSelected('processmonitors\hollowshunter') then EnvAddPath(ExpandConstant('{app}') + '\processmonitors\hollowshunter');
-      if WizardIsComponentSelected('processmonitors\pesieve') then EnvAddPath(ExpandConstant('{app}') + '\processmonitors\pesieve');
+      if WizardIsComponentSelected('processinspection\hollowshunter') then EnvAddPath(ExpandConstant('{app}') + '\processinspection\hollowshunter');
+      if WizardIsComponentSelected('processinspection\observer') then EnvAddPath(ExpandConstant('{app}') + '\processinspection\observer');
+      if WizardIsComponentSelected('processinspection\pesieve') then EnvAddPath(ExpandConstant('{app}') + '\processinspection\pesieve');
+      if WizardIsComponentSelected('programming\winpython') then EnvAddPath(ExpandConstant('{app}') + '\programming\winpython\python-3.11.3.amd64');
       if WizardIsComponentSelected('utilities\winapiexec') then EnvAddPath(ExpandConstant('{app}') + '\utilities\winapiexec');
     end
 end;
@@ -240,11 +276,14 @@ begin
       EnvRemovePath(ExpandConstant('{app}') + '\bin');
       EnvRemovePath(ExpandConstant('{app}') + '\android\dex2jar');
       EnvRemovePath(ExpandConstant('{app}') + '\compilers\devcpp\TDM-GCC-64\bin');
-      EnvRemovePath(ExpandConstant('{app}') + '\dotnet\de4dot');
       EnvRemovePath(ExpandConstant('{app}') + '\debuggers\hyperdbg');
+      EnvRemovePath(ExpandConstant('{app}') + '\dotnet\de4dot');
+      EnvRemovePath(ExpandConstant('{app}') + '\ole\lessmsi');
       EnvRemovePath(ExpandConstant('{app}') + '\ole\officemalscanner');
-      EnvRemovePath(ExpandConstant('{app}') + '\processmonitors\pesieve');
+      EnvRemovePath(ExpandConstant('{app}') + '\processinspection\hollowshunter');
+      EnvRemovePath(ExpandConstant('{app}') + '\processinspection\observer');
+      EnvRemovePath(ExpandConstant('{app}') + '\processinspection\pesieve');
+      EnvRemovePath(ExpandConstant('{app}') + '\programming\winpython\python-3.11.3.amd64');
       EnvRemovePath(ExpandConstant('{app}') + '\utilities\winapiexec');
-      EnvRemovePath(ExpandConstant('{app}') + 'processmonitors\hollowshunter');
     end
 end;
