@@ -166,6 +166,10 @@ Name: "{userdesktop}\cmd"; Filename: "cmd.exe"; WorkingDir: "{sys}\cmd.exe"; Tas
 ; Add documentation menu
 #include "documentation.iss"
 
+[InstallDelete]
+Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python.exe"; Tasks: msstorepython
+Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python3.exe"; Tasks: msstorepython
+
 [Tasks]
 Name: "addtopath"; Description: "Add programs to PATH (requires logging in again)";
 Name: "cmddesktop"; Description: "Create a shortcut to cmd.exe on desktop";
