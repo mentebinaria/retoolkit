@@ -9,4 +9,4 @@ Source: "{#MySrcDir}\processinspection\filegrab\*"; DestDir: "{app}\filegrab"; C
 
 [Icons]
 Name: "{group}\{#MyAppName}\FileGrab"; Filename: "{app}\filegrab\FileGrab.exe"; WorkingDir: "{app}\filegrab"; Components: "processinspection\filegrab"
-Name: "{app}\sendto+\sendto\Process monitors\FileGrab"; Filename: "{app}\filegrab\FileGrab.exe"; WorkingDir: "{app}\filegrab"; Components: "processinspection\filegrab"
+Name: "{app}\sendto+\sendto\Process Inspection\FileGrab"; Filename: "{app}\filegrab\FileGrab.exe"; WorkingDir: "{app}\filegrab"; Components: "processinspection\filegrab"
