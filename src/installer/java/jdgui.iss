@@ -9,4 +9,4 @@ Source: "{#MySrcDir}\java\jd-gui\*"; DestDir: "{app}\java\jd-gui"; Components: "
 
 [Icons]
 Name: "{group}\{#MyAppName}\JD-GUI"; Filename: "{app}\java\jd-gui\jd-gui.exe"; Components: "java\jdgui"
-Name: "{app}\sendto+\sendto\Java Decompilers\JD-GUI"; Filename: "{app}\java\jd-gui\jd-gui.exe"; Components: "java\jdgui"
+Name: "{app}\sendto+\sendto\Java\JD-GUI"; Filename: "{app}\java\jd-gui\jd-gui.exe"; Components: "java\jdgui"

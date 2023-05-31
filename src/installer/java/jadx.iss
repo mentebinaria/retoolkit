@@ -9,4 +9,4 @@ Source: "{#MySrcDir}\java\jadx\*"; DestDir: "{app}\java\jadx"; Components: "java
 
 [Icons]
 Name: "{group}\{#MyAppName}\JADX"; Filename: "{app}\java\jadx\bin\jadx-gui.bat"; Components: "java\jadx";
-Name: "{app}\sendto+\sendto\Java Decompilers\JADX"; Filename: "{app}\java\jadx\bin\jadx-gui.bat"; Components: "java\jadx";
+Name: "{app}\sendto+\sendto\Java\JADX"; Filename: "{app}\java\jadx\bin\jadx-gui.bat"; Components: "java\jadx";
