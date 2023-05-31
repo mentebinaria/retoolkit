@@ -26,7 +26,7 @@
 
 * Changes:
     * Added `syskb*.bin` KB files to IDR folder \[[#78](https://github.com/mentebinaria/retoolkit/issues/78)\]
-    * Changed `Ctrl+R` shortcut to `Ctrl+``
+    * Changed Ctrl+R shortcut to Ctrl+`
     * Cutter moved to Decompilers section
     * de4dot added to `PATH`
     * howllows_hunter added to `PATH`
