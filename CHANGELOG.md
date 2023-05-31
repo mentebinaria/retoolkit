@@ -5,24 +5,24 @@
 * Added:
     * 4n4lDetector
     * de4dot GUI
-    * dll_to_exe
+    * dll_to_exe \[[#68](https://github.com/mentebinaria/retoolkit/issues/68)\]
     * DotDumper
-    * dumpulator Python library
-    * FakeNet-NG
-    * gftrace
-    * GoReSym
-    * mal_unpack
+    * dumpulator Python library \[[#72](https://github.com/mentebinaria/retoolkit/issues/72)\]
+    * FakeNet-NG \[[#62](https://github.com/mentebinaria/retoolkit/issues/62)\]
+    * gftrace \[[#70](https://github.com/mentebinaria/retoolkit/issues/70)\]
+    * GoReSym \[[#67](https://github.com/mentebinaria/retoolkit/issues/67)\]
+    * mal_unpack \[[#66](https://github.com/mentebinaria/retoolkit/issues/66)\]
     * Nmap (plus Zenmap, Ndiff, Ncat, and Nping)
     * Observer
-    * pe_unmapper
+    * pe_unmapper \[[#80](https://github.com/mentebinaria/retoolkit/issues/80)\]
     * PEAnatomist
     * Regshot
     * requests Python library
     * Stud_PE
-    * WinObjEx64
+    * WinObjEx64 \[[#74](https://github.com/mentebinaria/retoolkit/issues/74)\]
     * x64dbg scripts for SecuROM and SafeDisc
-    * XNTSV
-    * XOpcodeCalc
+    * XNTSV \[[#71](https://github.com/mentebinaria/retoolkit/issues/71)\]
+    * XOpcodeCalc \[[#73](https://github.com/mentebinaria/retoolkit/issues/73)\]
 
 * Changes:
     * Added `syskb*.bin` KB files to IDR folder \[[#78](https://github.com/mentebinaria/retoolkit/issues/78)\]
