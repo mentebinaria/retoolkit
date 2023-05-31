@@ -80,7 +80,7 @@ Name: "hexeditors"; Description: "Hex Editors"; Types: full;
 #include "hexeditors\rehex.iss"
 
 [Components]
-Name: "java"; Description: "Java Decompilers"; Types: full;
+Name: "java"; Description: "Java"; Types: full;
 #include "java\jadx.iss"
 #include "java\jdgui.iss"
 #include "java\recaf.iss"
@@ -93,7 +93,7 @@ Name: "ole"; Description: "OLE/Compound File Binary File analysis (.msi, .doc, e
 #include "ole\ssview.iss"
 
 [Components]
-Name: "network"; Description: "Network Tools"; Types: full;
+Name: "network"; Description: "Network"; Types: full;
 #include "network\fakenet.iss"
 #include "network\echomirage.iss"
 #include "network\nmap.iss"
@@ -137,8 +137,8 @@ Name: "programming"; Description: "Programming"; Types: full;
 #include "programming\winpython.iss"
 
 [Components]
-Name: "signaturetools"; Description: "Signature Tools"; Types: full;
-#include "signaturetools\yara.iss"
+Name: "signature"; Description: "Signature"; Types: full;
+#include "signature\yara.iss"
 
 [Components]
 Name: "systeminformation"; Description: "System Information"; Types: full;
@@ -192,7 +192,7 @@ Name: "{userdesktop}\cmd"; Filename: "cmd.exe"; WorkingDir: "{sys}\cmd.exe"; Tas
 
 [InstallDelete]
 Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python.exe"; Tasks: msstorepython
-Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python3.exe"; Tasks: msstorepython
+Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python3*.exe"; Tasks: msstorepython
 
 [Tasks]
 Name: "addtopath"; Description: "Add programs to PATH (requires logging in again)";
