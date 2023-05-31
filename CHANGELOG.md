@@ -12,7 +12,7 @@
     * gftrace \[[#70](https://github.com/mentebinaria/retoolkit/issues/70)\]
     * GoReSym \[[#67](https://github.com/mentebinaria/retoolkit/issues/67)\]
     * mal_unpack \[[#66](https://github.com/mentebinaria/retoolkit/issues/66)\]
-    * Nmap (plus Zenmap, Ndiff, Ncat, and Nping)
+    * Nmap (plus Zenmap, Ndiff, Ncat, and Nping) \[[#65](https://github.com/mentebinaria/retoolkit/issues/65)\]
     * Observer
     * pe_unmapper \[[#80](https://github.com/mentebinaria/retoolkit/issues/80)\]
     * PEAnatomist
