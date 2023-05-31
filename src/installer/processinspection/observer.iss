@@ -1,5 +1,5 @@
 ; v1.1
-; hhttps://github.com/dastiwfantastiw/Observer
+; https://github.com/dastiwfantastiw/Observer
 
 [Components]
 Name: "processinspection\observer"; Description: "Observer"; Types: full;
