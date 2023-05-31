@@ -27,11 +27,12 @@
 * Changes:
     * Added `syskb*.bin` KB files to IDR folder \[[#78](https://github.com/mentebinaria/retoolkit/issues/78)\]
     * Changed Ctrl+R shortcut to Ctrl+`
-    * Cutter moved to Decompilers section
+    * Cutter moved to Decompilers category
     * de4dot added to `PATH`
     * howllows_hunter added to `PATH`
     * lessmsi added to `PATH`
-    * New Calculators section
+    * New Calculators category
+    * New Go category
     * ProcessHacker became System Informer
     * Python added to `PATH` \[[#75](https://github.com/mentebinaria/retoolkit/issues/75)\]
 
