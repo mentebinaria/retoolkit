@@ -209,14 +209,7 @@ Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python3*.exe"; Tasks: m
 Name: "addtopath"; Description: "Add programs to PATH (requires logging in again)";
 Name: "cmddesktop"; Description: "Create a cmd.exe shortcut on desktop";
 Name: "msstorepython"; Description: "Delete useless python.exe from Microsoft Store";
-Name: "wub"; Description: "Disable Windows Update to reduce noise in network capture";
-
-[Files]
-Source: "{#MySrcDir}\utilities\wub\*.exe"; DestDir: "{app}\utilities\wub"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: wub
-
-[Run]
-Filename: "{app}\utilities\wub\Wub_x64.exe"; Parameters: "/D"; Check: Is64BitInstallMode; Tasks: wub
-Filename: "{app}\utilities\wub\Wub.exe"; Parameters: "/D"; Check: not Is64BitInstallMode; Tasks: wub
+Name: "wub"; Description: "Disable Windows Update to reduce the noise in network captures (side effect: MS Store won't work until you re-enable it)";
 
 [Code]
 procedure EnvAddPath(Path: string);
