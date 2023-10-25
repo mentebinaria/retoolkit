@@ -184,13 +184,19 @@ Source: "{#MySrcDir}\retoolkit.ico"; Destdir: "{app}\sendto+\"
 
 ; Create a shortcut in "SendTo" user folder
 [Icons]
-Name: "{userappdata}\Microsoft\Windows\SendTo\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x64.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"; Check: Is64BitInstallMode
-Name: "{userappdata}\Microsoft\Windows\SendTo\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x86.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"; Check: not Is64BitInstallMode
 Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x86.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"; Check: not Is64BitInstallMode
 ; retoolkit desktop shortcut
 Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\sendto+\sendto+_x64.exe"; WorkingDir: "{app}\sendto+\"; IconFilename: "{app}\sendto+\retoolkit.ico"; HotKey: "ctrl+]"; Check: Is64BitInstallMode
 ; cmd.exe desktop shortcut
 Name: "{userdesktop}\cmd"; Filename: "cmd.exe"; WorkingDir: "{sys}\cmd.exe"; Tasks: cmddesktop
+
+; Add an item in the right-click menu for all files
+[Registry]
+Root: HKCR; Subkey: "*\shell\retoolkit"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "*\shell\retoolkit"; ValueType: string; ValueName: "Icon"; ValueData: "{app}\sendto+\retoolkit.ico"
+Root: HKCR; Subkey: "*\shell\retoolkit"; ValueType: string; ValueName: "Position"; ValueData: "top"
+Root: HKCR; Subkey: "*\shell\retoolkit\command"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "*\shell\retoolkit\command"; ValueType: string; ValueName: ""; ValueData: "cmd /c ""start /d {app}\sendto+ {app}\sendto+\sendto+_x64.exe ""%1"""""
 
 ; Add documentation menu
 #include "documentation.iss"
