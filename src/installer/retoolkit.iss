@@ -168,9 +168,10 @@ Name: "utilities"; Description: "Utilities"; Types: full;
 #include "utilities\manw.iss"
 #include "utilities\npp.iss"
 #include "utilities\openhashtab.iss"
+#include "utilities\regshot.iss"
 #include "utilities\vt.iss"
 #include "utilities\winapiexec.iss"
-#include "utilities\regshot.iss"
+#include "utilities\wub.iss"
 
 ; Use SendTo+ [https://github.com/lifenjoiner/sendto-plus/] for context menus
 ; as Windows limits the number of entries added via MUIVerb in Registry
