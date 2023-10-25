@@ -1,5 +1,5 @@
 #define MyAppName "retoolkit"
-#define MyAppVersion "2023.05"
+#define MyAppVersion "2023.10"
 #define MyAppPublisher "Mente Binária"
 #define MyAppURL "https://github.com/mentebinaria/retoolkit"
 #define MySrcDir "d:\ret\"
@@ -8,6 +8,7 @@
 AppId={{BB46345D-F5E9-408E-AA39-64A5EDD92E30}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
+AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -19,7 +20,10 @@ OutputBaseFilename={#MyAppName}_{#MyAppVersion}_setup
 WizardStyle=modern
 ; Compression=none
 SetupIconFile="..\..\assets\retoolkit.ico"
+UninstallDisplayIcon="{app}\sendto+\retoolkit.ico"
 ArchitecturesInstallIn64BitMode=x64
+UsePreviousTasks=yes
+ChangesEnvironment=yes
 
 [Components]
 Name: "android"; Description: "Android Tools"; Types: full;
