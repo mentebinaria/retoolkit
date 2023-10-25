@@ -1,4 +1,4 @@
-; v5.1.8 (build 360)
+; v5.2.3
 ; http://www.angusj.com/resourcehacker/
 
 [Components]

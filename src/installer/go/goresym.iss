@@ -1,4 +1,4 @@
-; v2.3
+; v2.6.2
 ; https://github.com/mandiant/GoReSym
 
 [Components]

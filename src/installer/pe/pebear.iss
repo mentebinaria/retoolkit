@@ -1,5 +1,5 @@
-; v0.5.5.7
-; https://github.com/hasherezade/pe-bear-releases
+; v0.6.5.2
+; https://github.com/hasherezade/pe-bear
 
 [Components]
 Name: "pe\pebear"; Description: "PE-Bear"; Types: full;

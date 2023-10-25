@@ -1,4 +1,4 @@
-; v1.1
+; v1.2
 ; https://github.com/dastiwfantastiw/Observer
 
 [Components]

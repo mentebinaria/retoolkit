@@ -1,4 +1,4 @@
-; v10.4.0
+; v10.5.2
 ; https://gchq.github.io/CyberChef/
 
 [Components]

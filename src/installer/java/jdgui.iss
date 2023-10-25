@@ -1,5 +1,5 @@
 ; v1.6.6
-; http://java-decompiler.github.io
+; https://java-decompiler.github.io/
 
 [Components]
 Name: "java\jdgui"; Description: "Java Decompiler (JD-GUI)"; Types: full;

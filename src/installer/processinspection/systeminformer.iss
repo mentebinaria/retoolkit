@@ -1,4 +1,4 @@
-; v3.0.6550
+; v3.0.7270
 ; https://systeminformer.sourceforge.io/
 
 [Components]

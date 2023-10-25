@@ -1,4 +1,4 @@
-; v2.1
+; v2.4
 ; https://github.com/pxb1988/dex2jar
 
 [Components]
