@@ -1,4 +1,4 @@
-; snapshot_2023-10-05_13-38
+; snapshot_2023-10-28_15-22
 ; https://x64dbg.com/
 
 [Components]
@@ -52,7 +52,7 @@ Source: "{#MySrcDir}\debuggers\x64dbg\plugins\64\multiasm\*"; DestDir: "{app}\de
 [Icons]
 Name: "{app}\sendto+\sendto\Documentation\Multiline Ultimate Assembler"; Filename: "{app}\documentation\multiasm.chm"; Components: "debuggers\x64dbg\plugins\multiasm"
 
-; OllyDumpEx v1.82
+; OllyDumpEx v1.84
 ; http://low-priority.appspot.com/ollydumpex/
 [Components]
 Name: "debuggers\x64dbg\plugins\ollydumpex"; Description: "OllyDumpEx"; Types: full compact;
