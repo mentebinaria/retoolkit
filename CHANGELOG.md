@@ -1,5 +1,20 @@
 # retoolkit Changelog
 
+## 2023.10
+
+* Added:
+    * AutoIt-Ripper
+    * malduck
+    * Simple Assembly Explorer (SAE)
+    * SpeakEasy
+    * UWPSpy
+    * XELFViewer
+
+* Changes:
+    * Windows Update Blocker is now explictly added as a tool, so users can enable or disable Windows Updates as they wish. \[[#90](https://github.com/mentebinaria/retoolkit/issues/90)\]
+    * retoolkit shortcut moved from "Send to" folder to the root of the right click menu. \[[#57](https://github.com/mentebinaria/retoolkit/issues/57)\]
+    * Added uninstall icon.
+
 ## 2023.05
 
 * Added:
