@@ -65,10 +65,12 @@ Name: "dotnet"; Description: "Dotnet Tools"; Types: full;
 #include "dotnet\extremedumper.iss"
 #include "dotnet\ilspy.iss"
 #include "dotnet\rundotnetdll.iss"
+#include "dotnet\sae.iss"
 
 [Components]
 Name: "elf"; Description: "ELF Tools"; Types: full;
 #include "elf\elfparserng.iss"
+#include "elf\xelfviewer.iss"
 
 [Components]
 Name: "go"; Description: "Go Tools"; Types: full;
@@ -123,6 +125,7 @@ Name: "pe"; Description: "PE Tools"; Types: full;
 #include "pe\reshack.iss"
 #include "pe\stud_pe.iss"
 #include "pe\winapisearch.iss"
+#include "pe\uwpspy.iss"
 
 [Components]
 Name: "processinspection"; Description: "Process Inspection"; Types: full;
