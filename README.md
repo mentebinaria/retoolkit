@@ -34,7 +34,3 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md).
-
-## Similar work
-
-Cracker Tools by yildo
