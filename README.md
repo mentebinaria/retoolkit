@@ -7,7 +7,7 @@ __English__ || [Türkçe](./README_tr_TR.md) || [Français](./README_fr_FR.md) |
 This is a collection of tools you may like if you are interested in reverse engineering and/or malware analysis on x86 and x64 Windows systems. After installing this program, you'll have two ways to access the tools:
 
 * Double-click the `retoolkit` icon in the Desktop.
-* Right-click on a file, choose `Send to -> retoolkit`. This way the selected file is passed as argument to the desired program.
+* Right-click on a file, choose `retoolkit`. This way the selected file is passed as argument to the desired program.
 
 ![](assets/retoolkit.gif)
 
@@ -21,7 +21,7 @@ The *.iss files you see here are the source code for our setup program built wit
 
 ## Included tools
 
-Have a look at the [wiki](https://github.com/mentebinaria/retoolkit/wiki) for a detailed list.
+Have a look at the [wiki](https://github.com/mentebinaria/retoolkit/wiki) for a detailed list. By the way, you won't find cracked software there.
 
 ## Is it safe to install it in my environment?
 
@@ -34,3 +34,7 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md).
+
+## Similar work
+
+Cracker Tools by yildo
