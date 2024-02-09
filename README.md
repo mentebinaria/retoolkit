@@ -34,3 +34,10 @@ It depends. The idea is to keep it simple. We won't add a tool just because it's
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md).
+
+## Similar projects
+
+We're happy retoolkit inspired other people to create their own forks:
+
+* https://github.com/indetectables-net/toolkit is also focused on RE tools and include a nice autoupdater program.
+* https://github.com/cristianzsh/forensictools is focused on forensic tools.
