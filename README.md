@@ -1,4 +1,5 @@
-__English__ || [Türkçe](./README_tr_TR.md) || [Français](./README_fr_FR.md) || [中文简体](./README_zh_CN.md) || [日本語](./README_jp_JP.md)
+__English__ || [Türkçe](./README_tr_TR.md) || [Français](./README_fr_FR.md) || [中文简体](./README_zh_CN.md) || [日本語](./README_jp_JP.md) || [Português](./README_pt_BR.md)
+
 
 # Reverse Engineer's Toolkit
 
