@@ -1,0 +1,70 @@
+{
+  "General": [
+    {
+      "title": "retoolkit wiki",
+      "description": "Official retoolkit wiki",
+      "type": "Web Link",
+      "path": "https://github.com/mentebinaria/retoolkit/wiki"
+    },
+    {
+      "title": "Reverse Engineering For Everyone",
+      "description": "Beginner's guide to reverse engineering",
+      "type": "PDF",
+      "path": "Documentation\\Reverse Engineering for everyone.pdf"
+    },
+    {
+      "title": "PC Assembly Language",
+      "description": "Book on PC assembly language",
+      "type": "PDF",
+      "path": "Documentation\\pcasm-book.pdf"
+    }
+  ],
+  "File Formats": [
+    {
+      "title": "PE Format",
+      "description": "Windows PE file format documentation",
+      "type": "Web Link",
+      "path": "https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"
+    },
+    {
+      "title": "PE-COFF Specification",
+      "description": "Microsoft PE/COFF file format specification",
+      "type": "PDF",
+      "path": "Documentation\\pecoff.pdf"
+    },
+    {
+      "title": "ELF Format",
+      "description": "ELF file format documentation",
+      "type": "PDF",
+      "path": "Documentation\\elf.pdf"
+    }
+  ],
+  "System Calls": [
+    {
+      "title": "Linux kernel system calls",
+      "description": "List of Linux kernel system calls",
+      "type": "Web Link",
+      "path": "https://marcin.juszkiewicz.com.pl/download/tables/syscalls.html"
+    },
+    {
+      "title": "syscalls.w3challs.com",
+      "description": "System call reference for multiple platforms",
+      "type": "Web Link",
+      "path": "https://syscalls.w3challs.com"
+    }
+  ],
+  "Tool Documentation": [
+    {
+      "title": "Ghidra Documentation",
+      "description": "Official Ghidra documentation",
+      "type": "Folder",
+      "path": "decompilers\\ghidra\\docs"
+    },
+    {
+      "title": "x64dbg Documentation",
+      "description": "x64dbg help file",
+      "type": "CHM",
+      "path": "debuggers\\x64dbg\\release\\x64dbg.chm"
+    }
+  ]
+}

@@ -25,6 +25,10 @@ Have a look at the [wiki](https://github.com/mentebinaria/retoolkit/wiki) for a 
 
 I don't know. Some included tools are not open source and come from shady places. You should use it exclusively in virtual machines and under your own responsibility.
 
+### False Positive Note
+
+Windows Defender may flag some tools (like ExtremeDumper) as malicious software due to their reverse engineering capabilities. For more information and solutions, see [EXTREMEDUMPER_FALSE_POSITIVE.md](EXTREMEDUMPER_FALSE_POSITIVE.md).
+
 ## Can you add tool X?
 
 It depends. The idea is to keep it simple. We won't add a tool just because it's not here yet. But if you think there's a good reason to do so, _and the license allows us to redistribute the software_, please [open an issue here](https://github.com/mentebinaria/retoolkit/issues?q=label%3Atool-request+) if it doesn't exist yet.

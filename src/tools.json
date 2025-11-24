@@ -1,0 +1,116 @@
+{
+  "Debuggers": [
+    {
+      "name": "x64dbg",
+      "description": "Open-source x64/x32 debugger for Windows",
+      "version": "snapshot_2023-10-28_15-22",
+      "path": "debuggers\\x64dbg\\release\\x96dbg.exe"
+    },
+    {
+      "name": "HyperDbg",
+      "description": "Hypervisor-assisted debugger for Windows",
+      "version": "v0.13.1",
+      "path": "debuggers\\hyperdbg"
+    }
+  ],
+  "Decompilers": [
+    {
+      "name": "Ghidra",
+      "description": "Software reverse engineering framework",
+      "version": "v11.3.2",
+      "path": "decompilers\\ghidra\\ghidraRun.bat"
+    },
+    {
+      "name": "Cutter",
+      "description": "Free and open-source reverse engineering platform powered by radare2",
+      "version": "v2.4.1",
+      "path": "decompilers\\cutter\\Cutter.exe"
+    },
+    {
+      "name": "dnSpyEx",
+      "description": "Debugger and .NET assembly editor",
+      "version": "v6.5.1",
+      "path": "dotnet\\dnSpyEx\\dnSpy-net-win64\\dnSpy.exe"
+    },
+    {
+      "name": "ILSpy",
+      "description": "Open-source .NET decompiler",
+      "version": "v9.0.0.7889",
+      "path": "dotnet\\ilspy\\ILSpy.exe"
+    }
+  ],
+  "PE Tools": [
+    {
+      "name": "PE-Bear",
+      "description": "Portable Executable reversing tool",
+      "version": "v0.7.0.4",
+      "path": "pe\\pe-bear\\PE-bear.exe"
+    },
+    {
+      "name": "pestudio",
+      "description": "PE file inspection tool",
+      "version": "v9.61",
+      "path": "pe\\pestudio\\pestudio.exe"
+    },
+    {
+      "name": "FLOSS",
+      "description": "Find Lost Strings (FLOSS) extracts obfuscated strings from malware",
+      "version": "v3.1.1",
+      "path": "bin\\floss.exe"
+    },
+    {
+      "name": "capa",
+      "description": "Static analysis tool to identify capabilities in executable files",
+      "version": "v9.1.0",
+      "path": "bin\\capa.exe"
+    }
+  ],
+  "ELF Tools": [
+    {
+      "name": "elfparser-ng",
+      "description": "ELF file analyzer",
+      "version": "v1.6.0",
+      "path": "elf\\elfparser-ng\\elfparser-ng.exe"
+    },
+    {
+      "name": "xelfviewer",
+      "description": "ELF viewer and analyzer",
+      "version": "v1.0.0",
+      "path": "elf\\xelfviewer\\xelfviewer.exe"
+    }
+  ],
+  "Programming": [
+    {
+      "name": "Notepad++",
+      "description": "Source code editor",
+      "version": "v8.7.9",
+      "path": "utilities\\npp\\notepad++.exe"
+    },
+    {
+      "name": "WinPython",
+      "description": "Portable Python distribution for Windows",
+      "version": "v3.11.3",
+      "path": "programming\\winpython\\python-3.11.3.amd64\\python.exe"
+    }
+  ],
+  "Utilities": [
+    {
+      "name": "7-Zip",
+      "description": "File archiver with a high compression ratio",
+      "version": "v24.09",
+      "path": "utilities\\7zip\\7zFM.exe"
+    },
+    {
+      "name": "CyberChef",
+      "description": "The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis",
+      "version": "v10.5.0",
+      "path": "utilities\\cyberchef\\CyberChef_v10.5.0.html"
+    },
+    {
+      "name": "Entropy",
+      "description": "Entropy calculator for files",
+      "version": "v1.1",
+      "path": "bin\\entropy.exe"
+    }
+  ]
+}
