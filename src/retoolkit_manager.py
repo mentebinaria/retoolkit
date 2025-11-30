@@ -24,6 +24,9 @@ class RetoolkitManager:
         # Load documentation
         self.load_documentation()
         
+        # Load context menu tools
+        self.load_context_menu_tools()
+        
     def setup_ui(self):
         # Create a notebook for different sections
         self.notebook = ttk.Notebook(self.root)
@@ -38,11 +41,18 @@ class RetoolkitManager:
         # Update tab
         self.create_update_tab()
         
+        # Session Log tab
+        self.create_session_log_tab()
+        
+        # Initialize session log
+        self.session_log = []
+        self.current_session_id = self.generate_session_id()
+        
     def create_tool_manager_tab(self):
         tool_frame = ttk.Frame(self.notebook)
         self.notebook.add(tool_frame, text="Tool Manager")
         
-        # Tool category selection
+        # Tool category and scenario selection
         category_frame = ttk.Frame(tool_frame)
         category_frame.pack(fill=tk.X, padx=5, pady=5)
         
@@ -51,6 +61,12 @@ class RetoolkitManager:
         self.category_combobox = ttk.Combobox(category_frame, textvariable=self.category_var, state="readonly")
         self.category_combobox.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
         self.category_combobox.bind('<<ComboboxSelected>>', self.on_category_selected)
+        
+        ttk.Label(category_frame, text="Scenario: ").pack(side=tk.LEFT, padx=5, pady=5)
+        self.scenario_var = tk.StringVar()
+        self.scenario_combobox = ttk.Combobox(category_frame, textvariable=self.scenario_var, state="readonly")
+        self.scenario_combobox.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
+        self.scenario_combobox.bind('<<ComboboxSelected>>', self.on_category_selected)
         
         # Tool list
         tool_list_frame = ttk.Frame(tool_frame)
@@ -81,6 +97,9 @@ class RetoolkitManager:
         
         self.open_folder_button = ttk.Button(action_frame, text="Open Tool Folder", command=self.open_tool_folder)
         self.open_folder_button.pack(side=tk.LEFT, padx=5, pady=5)
+        
+        self.add_to_context_menu_button = ttk.Button(action_frame, text="Add to Context Menu", command=self.add_to_context_menu)
+        self.add_to_context_menu_button.pack(side=tk.LEFT, padx=5, pady=5)
         
     def create_documentation_tab(self):
         doc_frame = ttk.Frame(self.notebook)
@@ -165,38 +184,48 @@ class RetoolkitManager:
             # Fallback to hardcoded data if JSON file is not found
             self.tool_data = {
                 "Debuggers": [
-                    {"name": "x64dbg", "description": "Open-source x64/x32 debugger for Windows", "version": "snapshot_2023-10-28_15-22", "path": "debuggers\\x64dbg\\release\\x96dbg.exe"},
-                    {"name": "HyperDbg", "description": "Hypervisor-assisted debugger for Windows", "version": "v0.13.1", "path": "debuggers\\hyperdbg"}
+                    {"name": "x64dbg", "description": "Open-source x64/x32 debugger for Windows", "version": "snapshot_2023-10-28_15-22", "path": "debuggers\\x64dbg\\release\\x96dbg.exe", "scenarios": ["动态调试", "恶意软件分析"]},
+                    {"name": "HyperDbg", "description": "Hypervisor-assisted debugger for Windows", "version": "v0.13.1", "path": "debuggers\\hyperdbg", "scenarios": ["内核调试", "动态调试", "恶意软件分析"]}
                 ],
                 "Decompilers": [
-                    {"name": "Ghidra", "description": "Software reverse engineering framework", "version": "v11.3.2", "path": "decompilers\\ghidra\\ghidraRun.bat"},
-                    {"name": "Cutter", "description": "Free and open-source reverse engineering platform powered by radare2", "version": "v2.4.1", "path": "decompilers\\cutter\\Cutter.exe"},
-                    {"name": "dnSpyEx", "description": "Debugger and .NET assembly editor", "version": "v6.5.1", "path": "dotnet\\dnSpyEx\\dnSpy-net-win64\\dnSpy.exe"},
-                    {"name": "ILSpy", "description": "Open-source .NET decompiler", "version": "v9.0.0.7889", "path": "dotnet\\ilspy\\ILSpy.exe"}
+                    {"name": "Ghidra", "description": "Software reverse engineering framework", "version": "v11.3.2", "path": "decompilers\\ghidra\\ghidraRun.bat", "scenarios": ["静态分析", "逆向工程", "恶意软件分析"]},
+                    {"name": "Cutter", "description": "Free and open-source reverse engineering platform powered by radare2", "version": "v2.4.1", "path": "decompilers\\cutter\\Cutter.exe", "scenarios": ["静态分析", "动态调试", "逆向工程"]},
+                    {"name": "dnSpyEx", "description": "Debugger and .NET assembly editor", "version": "v6.5.1", "path": "dotnet\\dnSpyEx\\dnSpy-net-win64\\dnSpy.exe", "scenarios": [".NET逆向", "静态分析", "动态调试"]},
+                    {"name": "ILSpy", "description": "Open-source .NET decompiler", "version": "v9.0.0.7889", "path": "dotnet\\ilspy\\ILSpy.exe", "scenarios": [".NET逆向", "静态分析"]}
                 ],
                 "PE Tools": [
-                    {"name": "PE-Bear", "description": "Portable Executable reversing tool", "version": "v0.7.0.4", "path": "pe\\pe-bear\\PE-bear.exe"},
-                    {"name": "pestudio", "description": "PE file inspection tool", "version": "v9.61", "path": "pe\\pestudio\\pestudio.exe"},
-                    {"name": "FLOSS", "description": "Find Lost Strings (FLOSS) extracts obfuscated strings from malware", "version": "v3.1.1", "path": "bin\\floss.exe"},
-                    {"name": "capa", "description": "Static analysis tool to identify capabilities in executable files", "version": "v9.1.0", "path": "bin\\capa.exe"}
+                    {"name": "PE-Bear", "description": "Portable Executable reversing tool", "version": "v0.7.0.4", "path": "pe\\pe-bear\\PE-bear.exe", "scenarios": ["静态分析", "PE文件分析", "恶意软件分析"]},
+                    {"name": "pestudio", "description": "PE file inspection tool", "version": "v9.61", "path": "pe\\pestudio\\pestudio.exe", "scenarios": ["静态分析", "PE文件分析", "恶意软件分析"]},
+                    {"name": "FLOSS", "description": "Find Lost Strings (FLOSS) extracts obfuscated strings from malware", "version": "v3.1.1", "path": "bin\\floss.exe", "scenarios": ["静态分析", "字符串分析", "恶意软件分析"]},
+                    {"name": "capa", "description": "Static analysis tool to identify capabilities in executable files", "version": "v9.1.0", "path": "bin\\capa.exe", "scenarios": ["静态分析", "恶意软件分析", "能力识别"]}
                 ],
                 "ELF Tools": [
-                    {"name": "elfparser-ng", "description": "ELF file analyzer", "version": "v1.6.0", "path": "elf\\elfparser-ng\\elfparser-ng.exe"},
-                    {"name": "xelfviewer", "description": "ELF viewer and analyzer", "version": "v1.0.0", "path": "elf\\xelfviewer\\xelfviewer.exe"}
+                    {"name": "elfparser-ng", "description": "ELF file analyzer", "version": "v1.6.0", "path": "elf\\elfparser-ng\\elfparser-ng.exe", "scenarios": ["静态分析", "ELF文件分析"]},
+                    {"name": "xelfviewer", "description": "ELF viewer and analyzer", "version": "v1.0.0", "path": "elf\\xelfviewer\\xelfviewer.exe", "scenarios": ["静态分析", "ELF文件分析"]}
                 ],
                 "Programming": [
-                    {"name": "Notepad++", "description": "Source code editor", "version": "v8.7.9", "path": "utilities\\npp\\notepad++.exe"},
-                    {"name": "WinPython", "description": "Portable Python distribution for Windows", "version": "v3.11.3", "path": "programming\\winpython\\python-3.11.3.amd64\\python.exe"}
+                    {"name": "Notepad++", "description": "Source code editor", "version": "v8.7.9", "path": "utilities\\npp\\notepad++.exe", "scenarios": ["代码编辑", "逆向工程辅助"]},
+                    {"name": "WinPython", "description": "Portable Python distribution for Windows", "version": "v3.11.3", "path": "programming\\winpython\\python-3.11.3.amd64\\python.exe", "scenarios": ["脚本编写", "逆向工程辅助"]}
                 ],
                 "Utilities": [
-                    {"name": "7-Zip", "description": "File archiver with a high compression ratio", "version": "v24.09", "path": "utilities\\7zip\\7zFM.exe"},
-                    {"name": "CyberChef", "description": "The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis", "version": "v10.5.0", "path": "utilities\\cyberchef\\CyberChef_v10.5.0.html"},
-                    {"name": "Entropy", "description": "Entropy calculator for files", "version": "v1.1", "path": "bin\\entropy.exe"}
+                    {"name": "7-Zip", "description": "File archiver with a high compression ratio", "version": "v24.09", "path": "utilities\\7zip\\7zFM.exe", "scenarios": ["文件处理", "逆向工程辅助"]},
+                    {"name": "CyberChef", "description": "The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis", "version": "v10.5.0", "path": "utilities\\cyberchef\\CyberChef_v10.5.0.html", "scenarios": ["数据处理", "加密分析", "逆向工程辅助"]},
+                    {"name": "Entropy", "description": "Entropy calculator for files", "version": "v1.1", "path": "bin\\entropy.exe", "scenarios": ["静态分析", "混淆检测", "恶意软件分析"]}
                 ]
             }
         
         # Set up category combobox
         self.category_combobox['values'] = sorted(list(self.tool_data.keys()))
+        
+        # Set up scenario combobox
+        self.all_scenarios = set()
+        for category in self.tool_data.values():
+            for tool in category:
+                if 'scenarios' in tool:
+                    self.all_scenarios.update(tool['scenarios'])
+        self.scenario_combobox['values'] = ['All'] + sorted(list(self.all_scenarios))
+        self.scenario_combobox.current(0)
+        
         if self.category_combobox['values']:
             self.category_combobox.current(0)
             self.on_category_selected(None)
@@ -240,11 +269,15 @@ class RetoolkitManager:
         for item in self.tool_tree.get_children():
             self.tool_tree.delete(item)
             
-        # Get selected category
+        # Get selected category and scenario
         category = self.category_var.get()
+        selected_scenario = self.scenario_var.get()
+        
         if category in self.tool_data:
             for tool in self.tool_data[category]:
-                self.tool_tree.insert('', tk.END, values=(tool['name'], tool['description'], tool['version']))
+                # Check if tool matches the selected scenario
+                if selected_scenario == 'All' or ('scenarios' in tool and selected_scenario in tool['scenarios']):
+                    self.tool_tree.insert('', tk.END, values=(tool['name'], tool['description'], tool['version']))
                 
     def on_doc_category_selected(self, event):
         # Clear existing documentation
@@ -281,6 +314,8 @@ class RetoolkitManager:
         # Run the tool
         try:
             subprocess.Popen(tool_path, shell=True, cwd=os.path.dirname(tool_path))
+            # Log the tool usage
+            self.log_tool_usage(tool_name, "Run Tool")
         except Exception as e:
             messagebox.showerror("Error", f"Failed to run tool: {str(e)}")
             
@@ -309,6 +344,8 @@ class RetoolkitManager:
         folder_path = os.path.dirname(tool_path)
         if os.path.exists(folder_path):
             os.startfile(folder_path)
+            # Log the tool usage
+            self.log_tool_usage(tool_name, "Open Tool Folder")
         else:
             messagebox.showerror("Error", f"Tool folder not found: {folder_path}")
             
@@ -381,6 +418,121 @@ class RetoolkitManager:
         except Exception as e:
             self.progress_bar.stop()
             self.update_status_label.config(text=f"Error installing update: {str(e)}")
+    
+    def create_session_log_tab(self):
+        log_frame = ttk.Frame(self.notebook)
+        self.notebook.add(log_frame, text="Session Log")
+        
+        # Session log text box
+        log_text_frame = ttk.Frame(log_frame)
+        log_text_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+        
+        self.log_text = tk.Text(log_text_frame, wrap=tk.WORD)
+        self.log_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
+        # Scrollbar for log text
+        scrollbar = ttk.Scrollbar(log_text_frame, orient=tk.VERTICAL, command=self.log_text.yview)
+        self.log_text.configure(yscroll=scrollbar.set)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        # Log actions
+        log_action_frame = ttk.Frame(log_frame)
+        log_action_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        self.clear_log_button = ttk.Button(log_action_frame, text="Clear Log", command=self.clear_session_log)
+        self.clear_log_button.pack(side=tk.LEFT, padx=5, pady=5)
+        
+        self.export_log_button = ttk.Button(log_action_frame, text="Export Log", command=self.export_session_log)
+        self.export_log_button.pack(side=tk.LEFT, padx=5, pady=5)
+    
+    def generate_session_id(self):
+        import datetime
+        return datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    def log_tool_usage(self, tool_name, action):
+        import datetime
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        log_entry = f"[{timestamp}] {action}: {tool_name}"
+        self.session_log.append(log_entry)
+        self.log_text.insert(tk.END, log_entry + "\n")
+        self.log_text.see(tk.END)
+    
+    def clear_session_log(self):
+        self.session_log = []
+        self.log_text.delete(1.0, tk.END)
+        # Generate new session ID
+        self.current_session_id = self.generate_session_id()
+    
+    def export_session_log(self):
+        if not self.session_log:
+            messagebox.showwarning("Empty Log", "The session log is empty.")
+            return
+        
+        # Ask user for export file path
+        file_path = filedialog.asksaveasfilename(
+            defaultextension=".txt",
+            filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")],
+            initialfile=f"retoolkit_session_{self.current_session_id}.txt"
+        )
+        
+        if file_path:
+            try:
+                import datetime
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write("Reverse Engineer's Toolkit Session Log\n")
+                    f.write(f"Session ID: {self.current_session_id}\n")
+                    f.write(f"Generated on: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                    f.write("\n")
+                    for entry in self.session_log:
+                        f.write(entry + "\n")
+                messagebox.showinfo("Export Successful", f"Session log exported to: {file_path}")
+            except Exception as e:
+                messagebox.showerror("Export Error", f"Failed to export session log: {str(e)}")
+    
+    def load_context_menu_tools(self):
+        # Load context menu tools from JSON file
+        try:
+            with open('context_menu.json', 'r', encoding='utf-8') as f:
+                self.context_menu_tools = json.load(f)
+        except FileNotFoundError:
+            # Initialize with empty list if file not found
+            self.context_menu_tools = []
+    
+    def save_context_menu_tools(self):
+        # Save context menu tools to JSON file
+        try:
+            with open('context_menu.json', 'w', encoding='utf-8') as f:
+                json.dump(self.context_menu_tools, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            messagebox.showerror("Save Error", f"Failed to save context menu tools: {str(e)}")
+    
+    def add_to_context_menu(self):
+        # Get selected tool
+        selected_item = self.tool_tree.selection()
+        if not selected_item:
+            messagebox.showwarning("Warning", "Please select a tool to add to context menu.")
+            return
+            
+        # Get tool information
+        item = self.tool_tree.item(selected_item[0])
+        tool_name = item['values'][0]
+        category = self.category_var.get()
+        
+        # Find the tool in the tool data
+        for tool in self.tool_data[category]:
+            if tool['name'] == tool_name:
+                # Check if tool is already in context menu
+                if any(t['name'] == tool_name for t in self.context_menu_tools):
+                    messagebox.showinfo("Already in Context Menu", f"Tool '{tool_name}' is already in the context menu.")
+                    return
+                
+                # Add tool to context menu
+                self.context_menu_tools.append(tool.copy())
+                self.save_context_menu_tools()
+                messagebox.showinfo("Added to Context Menu", f"Tool '{tool_name}' has been added to the context menu.")
+                break
+        else:
+            messagebox.showerror("Error", "Tool not found.")
             
 if __name__ == "__main__":
     try:
