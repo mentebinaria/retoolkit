@@ -206,13 +206,6 @@ Root: HKCR; Subkey: "*\shell\retoolkit\command"; ValueType: string; ValueName: "
 ; Add documentation menu
 #include "documentation.iss"
 
-; Add Retoolkit Manager application
-[Files]
-Source: "{#MySrcDir}\retoolkit_manager.py"; DestDir: "{app}\"; Flags: ignoreversion
-
-[Icons]
-Name: "{group}\{#MyAppName}\Retoolkit Manager"; Filename: "{app}\retoolkit_manager.py"; WorkingDir: "{app}\"; IconFilename: "{app}\sendto+\retoolkit.ico"
-
 [InstallDelete]
 Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python.exe"; Tasks: msstorepython
 Type: files; Name: "{localappdata}\Microsoft\WindowsApps\python3*.exe"; Tasks: msstorepython
