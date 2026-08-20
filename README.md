@@ -56,3 +56,17 @@ if it doesn't exist yet.
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md).
+
+## Inspiration
+
+This project is inspired by (but not copied from) a toolkit that has been distributed
+in reverse engineering forums over the years called "Cracker Tools by yildo".
+I couldn't find an official source for it, although a web search will reveal
+various copies and references.
+
+The key differences are:
+
+- retoolkit does not contain cracked software. It only includes software authorized
+for redistribution by its license or by its authors.
+- retoolkit is an open-source installer. You are free to copy, modify, and distribute
+your own installer based on this project. Attribution to the original project is expected.

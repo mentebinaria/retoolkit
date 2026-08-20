@@ -236,6 +236,11 @@ Name: "cmddesktop"; Description: "Create a cmd.exe shortcut on desktop";
 Name: "msstorepython"; Description: "Delete useless python.exe from Microsoft Store";
 Name: "wub"; Description: "Disable Windows Update to reduce the noise in network captures (side effect: MS Store won't work until you re-enable it)";
 
+; %PATH% handling code from https://stackoverflow.com/a/46609047
+; Author: Wojciech Mleczek
+; Date: Oct 6, 2017
+; License: CC-BY-SA 3.0
+; https://creativecommons.org/licenses/by-sa/3.0/
 [Code]
 procedure EnvAddPath(Path: string);
 var
