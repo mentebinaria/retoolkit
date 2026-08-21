@@ -12,7 +12,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v6.5.1
+; v6.6.0
 ; https://github.com/dnSpyEx/dnSpy
 
 [Components]

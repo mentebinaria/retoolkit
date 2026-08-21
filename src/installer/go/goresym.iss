@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v3.3
+; v3.4
 ; https://github.com/mandiant/GoReSym
 
 [Components]

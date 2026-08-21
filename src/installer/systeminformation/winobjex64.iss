@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v2.1.0
+; v2.1.1
 ; https://github.com/hfiref0x/WinObjEx64
 
 [Components]

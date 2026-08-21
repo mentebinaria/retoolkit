@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v12.0.4
+; v12.1.3
 ; https://github.com/NationalSecurityAgency/ghidra/
 
 [Components]

@@ -13,19 +13,19 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v7.99
+; v7.991
 ; https://nmap.org/
 
 [Components]
 Name: "network\nmap"; Description: "Nmap (plus Zenmap, Ndiff, Ncat, and Nping)"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\network\npcap\npcap-1.87.exe"; DestDir: "{app}\network\npcap"; Components: "network\nmap"; Check: not NpcapInstalled
+Source: "{#MySrcDir}\network\nmap\npcap-1.88.exe"; DestDir: "{app}\network\nmap"; Components: "network\nmap"; Check: not NpcapInstalled
 Source: "{#MySrcDir}\network\nmap\*.exe"; DestDir: "{app}\network\nmap"; Components: "network\nmap"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Run]
-Filename: "{app}\network\npcap\npcap-1.87.exe"; Check: not NpcapInstalled; Components: "network\nmap"; Flags: waituntilterminated
-Filename: "{app}\network\nmap\nmap-7.99-setup.exe"; Parameters: "/S /D={app}\network\nmap"; Components: "network\nmap"
+Filename: "{app}\network\nmap\npcap-1.88.exe"; Check: not NpcapInstalled; Components: "network\nmap"; Flags: waituntilterminated
+Filename: "{app}\network\nmap\nmap-7.991-setup.exe"; Parameters: "/S /D={app}\network\nmap"; Components: "network\nmap"
 
 [Icons]
 Name: "{app}\sendto+\sendto\Network\Nmap - Zenmap GUI"; Filename: "{app}\network\nmap\zenmap\bin\pythonw.exe"; Parameters: "-c ""from zenmapGUI.App import run;run()"""; WorkingDir: "{app}\network\nmap"; IconFilename: "{app}\network\nmap\nmap.exe"; Components: "network\nmap"

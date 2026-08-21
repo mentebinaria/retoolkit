@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v0.7.1
+; v0.7.2
 ; https://github.com/hasherezade/pe-bear
 
 [Components]

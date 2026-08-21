@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v1.2.67
+; v1.2.82
 ; https://github.com/goretk/redress
 
 [Components]
