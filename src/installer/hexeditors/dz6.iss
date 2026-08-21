@@ -12,7 +12,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v0.7.0
+; v0.7.1
 ; https://github.com/mentebinaria/dz6
 
 [Components]

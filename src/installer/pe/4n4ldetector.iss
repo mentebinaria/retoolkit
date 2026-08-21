@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v3.4
+; v3.5
 ; https://github.com/4n0nym0us/4n4lDetector
 
 [Components]

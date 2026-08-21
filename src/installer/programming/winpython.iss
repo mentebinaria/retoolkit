@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; Winpython64-3.13.12.0dot.zip
+; Winpython64-3.13.15.0dotb3.zip
 ; https://github.com/winpython/winpython
 
 [Components]

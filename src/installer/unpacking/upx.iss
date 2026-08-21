@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v5.1.1
+; v5.2.0
 ; https://github.com/upx/upx
 
 [Components]

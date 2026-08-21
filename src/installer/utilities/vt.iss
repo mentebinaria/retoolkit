@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v1.3.0
+; v1.3.1
 ; https://github.com/VirusTotal/vt-cli
 
 [Components]

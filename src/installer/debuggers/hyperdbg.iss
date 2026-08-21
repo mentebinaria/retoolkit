@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v0.18.1 https://github.com/HyperDbg/HyperDbg
+; v0.23 https://github.com/HyperDbg/HyperDbg
 
 [Components]
 Name: "debuggers\hyperdbg"; Description: "HyperDbg"; Types: full; Check: Is64BitInstallMode

@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v2.4.1
+; v2.5.0
 ; https://cutter.re/
 
 [Components]

@@ -13,7 +13,7 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 
-; v10.23.0
+; v11.4.0
 ; https://gchq.github.io/CyberChef/
 
 [Components]
@@ -23,5 +23,5 @@ Name: "utilities\cyberchef"; Description: "CyberChef"; Types: full;
 Source: "{#MySrcDir}\utilities\cyberchef\*"; DestDir: "{app}\utilities\cyberchef"; Components: "utilities\cyberchef"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
-Name: "{group}\{#MyAppName}\CyberChef"; Filename: "{app}\utilities\cyberchef\CyberChef_v10.23.0.html"; WorkingDir: "{app}\utilities\cyberchef"; Components: "utilities\cyberchef"
-Name: "{app}\sendto+\sendto\Utilities\CyberChef"; Filename: "{app}\utilities\cyberchef\CyberChef_v10.23.0.html"; WorkingDir: "{app}\utilities\cyberchef"; Components: "utilities\cyberchef"
+Name: "{group}\{#MyAppName}\CyberChef"; Filename: "{app}\utilities\cyberchef\CyberChef_v11.4.0.html"; WorkingDir: "{app}\utilities\cyberchef"; Components: "utilities\cyberchef"
+Name: "{app}\sendto+\sendto\Utilities\CyberChef"; Filename: "{app}\utilities\cyberchef\CyberChef_v11.4.0.html"; WorkingDir: "{app}\utilities\cyberchef"; Components: "utilities\cyberchef"
