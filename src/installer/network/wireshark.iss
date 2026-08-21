@@ -20,7 +20,7 @@
 Name: "network\wireshark"; Description: "Wireshark"; Types: full;
 
 [Files]
-Source: "{#MySrcDir}\network\npcap\npcap-1.88.exe"; DestDir: "{app}\network\npcap"; Components: "network\wireshark"; Check: not NpcapInstalled
+Source: "{#MySrcDir}\network\wireshark\npcap-1.88.exe"; DestDir: "{app}\network\wireshark"; Components: "network\wireshark"; Check: not NpcapInstalled
 Source: "{#MySrcDir}\network\wireshark\*"; DestDir: "{app}\network\wireshark"; Components: "network\wireshark"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
